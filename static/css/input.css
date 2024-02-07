@@ -19,7 +19,7 @@
     }
 
     .ul-menu {
-        @apply menu menu-xl dropdown-content mt-3 z-10 p-2;
+        @apply menu menu-sm dropdown-content mt-3 z-10 p-2;
         @apply shadow bg-base-300 rounded-box w-52;
         @apply text-xl;
     }
