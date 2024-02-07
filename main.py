@@ -19,12 +19,10 @@ def serve_home():
 @flask_app.route("/<path:name>")
 def serve_section(name):
     template = f"{name}.html"
-    logger.debug(str(template))
     return render_template(template)
 
 @flask_app.route("/static/<path:filename>")
 def serve_static(filename):
-    logger.debug(filename)
     return send_from_directory(STATIC_DIR, filename)
 
 if __name__ == "__main__":
