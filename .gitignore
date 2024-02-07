@@ -1,0 +1,31 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask-specific
+instance/
+.webassets-cache
+
+# Virtual environment
+venv/
+ENV/
+
+# Node.js and npm
+node_modules/
+npm-debug.log
+
+# JavaScript build output
+build/
+dist/
+
+# Local development files
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Miscellaneous
+.DS_Store
+*.swp

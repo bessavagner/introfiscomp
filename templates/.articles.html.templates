@@ -1,0 +1,9 @@
+{{% extends "base.html" %}}
+{{% block title %}}{title}{{% endblock %}}
+{{% block head %}}
+  {{ super() }}
+{{% endblock %}}
+{{% block content %}}
+    <div id="app"></div>
+    <script type="module" src="{{ url_for('static', filename='js/{javascript}') }}"></script>
+{{% endblock %}}

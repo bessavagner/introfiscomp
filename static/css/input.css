@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .navbar {
+        @apply h-20;
+    }
+
+    .app-container {
+        @apply relative flex flex-row justify-center items-start;
+        @apply max-h-screen min-w-fit overflow-y-scroll w-fit mx-auto mt-20;
+        @apply shadow-lg shadow-base-300;
+    }
+    
+    .menu-container {
+        @apply w-full;
+    }
+
+    .ul-menu {
+        @apply menu menu-xl dropdown-content mt-3 z-10 p-2;
+        @apply shadow bg-base-300 rounded-box w-52;
+        @apply text-xl;
+    }
+
+    .ul-menu-item {
+        @apply p-2 bg-base-100 rounded-t-none;
+    }
+
+    .articles-set-container {
+        @apply flex flex-col justify-center;
+        @apply w-fit mx-auto px-16 mt-40 pb-40 xl:mt-16;
+    }
+
+    .steps-container {
+        @apply fixed hidden xl:block top-40 left-20;
+        @apply z-[2];
+        @apply bg-base-100;
+    }
+
+    .steps-on-view {
+        @apply step-primary;
+    }
+
+    .mockup-code pre {
+        @apply my-0 py-0;
+    }
+
+    .mockup-code {
+        @apply overflow-x-scroll;
+    }
+
+    .mockup-code-container + .mockup-code-container {
+        @apply mt-5;
+    }
+
+    .prose p {
+        @apply text-justify;
+    }
+
+    .prose h4 {
+        @apply text-secondary;
+    }
+
+    .prose h3 {
+        @apply text-cyan-600 text-3xl mt-4;
+    }
+
+    .prose h2 {
+        @apply text-primary;
+    }
+
+    .problema-container {
+        @apply border-2 border-neutral-600 rounded-xl w-full mt-2 px-4;
+    }
+}

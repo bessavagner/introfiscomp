@@ -1,0 +1,65 @@
+{
+    "title": "Expressões Aritméticas",
+    "sections": [
+        {
+            "title": null,
+            "content": [
+                {
+                    "p": "Uma expressão aritmética é composta por operandos e operadores. Os operandos são os números ou variáveis que participam do cálculo, e os operadores são os símbolos que indicam a operação a ser realizada."
+                },
+                {
+                    "p": "Por exemplo, a seguinte expressão aritmética calcula a soma de 10 e 20: "
+                },
+                {
+                    "p": "Seguem aqui mais alguns exemplos"
+                },
+                {
+                    "mockupCode": "x = 10 + 20"
+                },
+                {
+                    "mockupCodes": [
+                        "// Adição, subtração, multiplicação e divisão",
+                        "// Qual o valor que será atribuído à variável <code>resultado`?",
+                        "resultado = 5 + 3 * 2 / 4 - 1",
+                        "// Potenciação e operações com parênteses",
+                        "base = 2",
+                        "expoente = 3",
+                        "resultado_potencia = base**expoente",
+                        "resultado_com_parênteses = base**(expoente + 1)",
+                        "// Operações de módulo, resto e divisão inteira",
+                        "numero1 = 17",
+                        "numero2 = 5",
+                        "mod_resultado = numero1 mod numero2 // Retorna o resto da divisão",
+                        "resto_resultado = numero1 % numero2 // Outra forma de obter o resto",
+                        "div_inteira_resultado = numero1 div numero2 // Retorna o resultado da divisão inteira"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Ordem de precedência",
+            "content": [
+                {
+                    "p": "A ordem de precedência das operações aritméticas determina a ordem em que elas são realizadas. Essa ordem é definida por regras matemáticas universais e é importante segui-la para garantir que as expressões sejam avaliadas corretamente."
+                },
+                {
+                    "ol": [
+                        "<strong>Parênteses</strong>: Os parênteses têm a maior precedência, o que significa que as expressões dentro deles são sempre avaliadas primeiro. Por exemplo, na expressão <code>(5 + 3) * 2</code>, os parênteses indicam que a soma de 5 e 3 deve ser calculada antes da multiplicação por 2.",
+                        "<strong>Potenciação</strong>: A potenciação tem a segunda maior precedência, o que significa que as operações de potenciação são realizadas antes de todas as outras operações aritméticas, exceto os parênteses. Por exemplo, na expressão <code>2 ** 3 + 5</code>, a potenciação de 2 e 3 é realizada antes da adição de 5.",
+                        "<strong>Multiplicação e divisão</strong>: A multiplicação e a divisão têm a mesma precedência, e são realizadas da esquerda para a direita. Por exemplo, na expressão <code>5 * 3 / 2</code>, a multiplicação de 5 e 3 é realizada antes da divisão por 2.",
+                        "<strong>Adição e subtração</strong>: A adição e a subtração têm a menor precedência, e são realizadas da esquerda para a direita. Por exemplo, na expressão <code>5 + 3 - 2</code>, a adição de 5 e 3 é realizada antes da subtração de 2."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Resto e divisão inteira",
+            "content": [
+                {
+                    "p": "Duas operações importantes na construção de algorítimos são:"
+                }
+            ]
+        }
+    ],
+    "lead": "As expressões aritméticas desempenham um papel crucial na programação, permitindo a realização de cálculos matemáticos."
+}

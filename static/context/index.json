@@ -1,0 +1,32 @@
+{
+    "index": {
+        "01": {
+            "algoritimos": [
+                {
+                    "subtitle": "Algoritimos",
+                    "path": "/01_algoritimos/01_algoritimos"
+                },
+                {
+                    "subtitle": "Estruturas",
+                    "path": "/01_algoritimos/02_estruturas"
+                }
+            ]
+        },
+        "02": {
+            "python": [
+                {
+                    "subtitle": "Variaveis e tipos de dados",
+                    "path": "/02_python/01_variaveis-e-tipos-de-dados"
+                },
+                {
+                    "subtitle": "Funcoes condicionais e lacos",
+                    "path": "/02_python/03_funcoes-condicionais-e-lacos"
+                },
+                {
+                    "subtitle": "Introducao",
+                    "path": "/02_python/01_introducao"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "articles": [
+        {
+            "title": "Introdução à linguagem de programação Python",
+            "sections": [
+                {
+                    "title": null,
+                    "content": [
+                        {
+                            "p": "A linguagem Python é amplamente utilizada em diversas áreas, incluindo desenvolvimento web, ciência de dados, inteligência artificial, automação de tarefas e muito mais. Ela é conhecida por sua versatilidade, facilidade de aprendizado e grande comunidade de desenvolvedores."
+                        }
+                    ]
+                },
+                {
+                    "title": "Linguagens compiladas vs. linguagens interpretadas",
+                    "content": [
+                        {
+                            "p": "<strong>Linguagens compiladas</strong> são aquelas que são convertidas em código de máquina antes de serem executadas. Isso significa que o código fonte da linguagem compilada é traduzido para um formato que a máquina pode entender diretamente."
+                        },
+                        {
+                            "p": "<strong>Linguagens interpretadas</strong>, por outro lado, são aquelas que são executadas diretamente a partir do código fonte. Isso significa que o código fonte da linguagem interpretada é lido e interpretado linha por linha pela máquina."
+                        },
+                        {
+                            "p": "Python é uma linguagem interpretada, o que significa que seu código fonte não precisa ser compilado antes de ser executado. Isso torna a Python uma linguagem mais fácil de aprender e mais rápida de desenvolver, pois as alterações no código fonte podem ser executadas imediatamente."
+                        }
+                    ]
+                },
+                {
+                    "title": "Executando comandos Python",
+                    "content": [
+                        {
+                            "p": "### Interpretador interativo"
+                        },
+                        {
+                            "p": "Existem várias maneiras de executar comandos Python. Uma delas é usando o interpretador interativo do Python, que pode ser aberto digitando <code>python</code> no terminal (Linux, Mac OS) ou PowerShell (windows). No interpretador interativo, você pode digitar comandos Python e obter os resultados imediatamente."
+                        },
+                        {
+                            "p": "### Executando arquivos .py (scripts)"
+                        },
+                        {
+                            "p": "Outra maneira de executar comandos Python é criando um arquivo com extensão <code>.py</code> e executando-o usando o comando <code>python</code>. Por exemplo, se você criar um arquivo chamado <code>hello.py</code> com o seguinte conteúdo:"
+                        },
+                        {
+                            "p": "<code></code>`python"
+                        },
+                        {
+                            "p": "print(\"Hello, world!\")"
+                        },
+                        {
+                            "mockupCode": "Você pode executá-lo digitando o seguinte comando no terminal:"
+                        },
+                        {
+                            "p": "python hello.py"
+                        },
+                        {
+                            "ul": [
+                                "<strong>Acesso a GPUs:</strong> O Google Colab permite que os usuários acessem GPUs gratuitas para executar código Python que requer alto poder de computação.",
+                                "<strong>Armazenamento em nuvem:</strong> O Google Colab fornece aos usuários espaço de armazenamento em nuvem para armazenar seus notebooks e arquivos.",
+                                "<strong>Compartilhamento de notebooks:</strong> O Google Colab permite que os usuários compartilhem seus notebooks com outras pessoas, facilitando a colaboração em projetos.",
+                                "<strong>Integração com o Google Drive:</strong> O Google Colab pode ser integrado com o Google Drive, permitindo que os usuários armazenem seus notebooks e arquivos no Drive."
+                            ]
+                        },
+                        {
+                            "ul": [
+                                "<strong>Aprendizado de máquina:</strong> O Google Colab pode ser usado para executar código Python para treinamento e avaliação de modelos de aprendizado de máquina.",
+                                "<strong>Ciência de dados:</strong> O Google Colab pode ser usado para executar código Python para análise e visualização de dados.",
+                                "<strong>Desenvolvimento web:</strong> O Google Colab pode ser usado para executar código Python para desenvolvimento de aplicativos web.",
+                                "<strong>Automação de tarefas:</strong> O Google Colab pode ser usado para executar código Python para automação de tarefas repetitivas."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Ecossistema Python",
+                    "content": [
+                        {
+                            "ul": [
+                                "<strong>NumPy:</strong> Biblioteca para computação científica.",
+                                "<strong>SciPy:</strong> Biblioteca para computação científica avançada.",
+                                "<strong>Pandas:</strong> Biblioteca para análise e manipulação de dados.",
+                                "<strong>Matplotlib:</strong> Biblioteca para visualização de dados.",
+                                "<strong>Seaborn:</strong> Biblioteca para visualização de dados estatísticos.",
+                                "<strong>Requests:</strong> Biblioteca para fazer solicitações HTTP.",
+                                "<strong>BeautifulSoup:</strong> Biblioteca para fazer scraping de dados de páginas web.",
+                                "<strong>Django:</strong> Framework para desenvolvimento web.",
+                                "<strong>Flask:</strong> Framework para desenvolvimento web."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "lead": "Python é uma linguagem de programação de alto nível, interpretada, de propósito geral e orientada a objetos. Criada por <a href=\"https://pt.wikipedia.org/wiki/Guido_van_Rossum\">Guido van Rossum</a> e lançada pela primeira vez em 1991, a Python tem uma filosofia de design que enfatiza a legibilidade do código, simplicidade e produtividade."
+        }
+    ]
+}
