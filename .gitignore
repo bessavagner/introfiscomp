@@ -9,6 +9,7 @@ instance/
 
 # Virtual environment
 venv/
+.venv/
 ENV/
 
 # Node.js and npm
