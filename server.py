@@ -1,9 +1,8 @@
 import os
-from pathlib import Path
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import uvicorn
 
-load_dotenv()  # Loads variables from .env file
+# load_dotenv()  # Loads variables from .env file
 
 APP_NAME = os.getenv("APP_NAME", default="app")
 APP_DIR = os.getenv("APP_DIR", default=".")

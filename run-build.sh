@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Process Markdown files and parse to json
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
 python build.py
 # Install tailwindcss
 npm install tailwindcss
