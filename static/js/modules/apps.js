@@ -1,6 +1,18 @@
 import { Component } from "./base.js";
-import { ArticleSet, Steps, Menu} from "./components.js";
+import { ArticleSet, Steps, Menu, Skeleton} from "./components.js";
 import { sleep } from "./tools.js";
+
+export class SkeletonApp extends Component {
+    constructor(jsonPath) {
+        super('div', 'skeleton-app-container');
+        this.menu = new Skeleton(4);
+    }
+    renderApp(into) {
+        this.menu.load();
+        this.menu.render(this.element);
+        this.render(into);
+    }
+}
 
 export class MenuApp extends Component {
     constructor(jsonPath) {
@@ -40,21 +52,34 @@ export class ArticleViewerApp extends Component {
         this.articlesSetContainer.element.addEventListener('scroll', (event) => {this.updateSteps(event)});
     }
     async renderApp(into) {
+        this.render(into);
         await this.articles.load();
-        let breakWhile = 3;
+        let breakWhile = 40;
+        const skeleton = new Skeleton(4);
+        skeleton.addItem(4);
+        skeleton.addItem(3);
+        skeleton.addItem(2);
+        for (let i = 0; i <= 18; i++) {
+            skeleton.addItem(1);
+        }
+        skeleton.render(this.articlesSetContainer.element);
+        console.log(skeleton.element);
         while (
             (this.articles.numberOfArticles === 0  ||
             Object.keys(this.articles.items).length < this.articles.numberOfArticles)) {
             console.debug("Waiting articles rendering...");
-            await sleep(1000);
-            if (breakWhile === 0) break;
+            if (breakWhile === 0) {
+                skeleton.remove();
+                break;
+            };
+            await sleep(100);
             breakWhile -= 1;
         }
+        if (skeleton) skeleton.remove();
         Object.keys(this.articles.items).forEach((articleId) => {
             this.steps.addItem(this.articles.items[articleId].title, articleId);
         })
 
-        this.render(into);
         
     }
     updateSteps(event){

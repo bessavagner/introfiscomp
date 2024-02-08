@@ -61,4 +61,7 @@ export class Component {
             `A parent element must be provided to argument 'into'`
         );
     }
+    remove(){
+        this.element.remove();
+    }
 }

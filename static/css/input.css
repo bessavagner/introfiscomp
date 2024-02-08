@@ -120,6 +120,30 @@
         @apply text-primary;
     }
 
+    .skeleton-container {
+        @apply w-full h-full mt-20; 
+    }
+
+    .skeleton-component {
+        @apply flex flex-col w-full max-w-prose;
+    }
+
+    .skeleton-element-1 {
+        @apply skeleton h-4 w-full;
+    }
+
+    .skeleton-element-2 {
+        @apply skeleton h-4 w-28;
+    }
+
+    .skeleton-element-3 {
+        @apply skeleton h-4 w-12;
+    }
+
+    .skeleton-element-4 {
+        @apply skeleton h-32 w-full;
+    }
+
     .problema-container {
         @apply border-2 border-neutral-600 rounded-xl w-full mt-2;
     }

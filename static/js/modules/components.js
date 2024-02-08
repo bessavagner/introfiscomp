@@ -413,3 +413,17 @@ export class Menu extends Component {
     }
 }
 
+export class Skeleton extends Component {
+    constructor(gap='4') {
+        super('div');
+        this.container = new Component('div');
+        this.container.setClassList('skeleton-container');
+        this.setClassList(`skeleton-component gap-${gap}`);
+        this.render(this.container.element);
+    }
+    addItem(type=1) {
+        const item = new Component('div');
+        item.setClassList(`skeleton-element-${type}`)
+        item.render(this.element)
+    }
+}
