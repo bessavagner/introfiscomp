@@ -373,7 +373,6 @@ export class Menu extends Component {
                         // console.log(item.subtitle, item.path);
                         anchor.element.setAttribute('href', item.path);
                         anchor.setContent(item.subtitle);
-                        console.log(anchor.element.outerHTML);
                         ul.addItem(anchor.element.outerHTML);
                     })
                     ul.render(detailsComponent.element);

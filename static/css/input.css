@@ -5,13 +5,17 @@
 @layer components {
 
     body {
-        @apply w-screen;
+        @apply h-screen w-screen;
+    }
+    
+    #content {
+        @apply absolute top-0 h-screen w-full;
     }
 
-    .content {
-        @apply max-w-full;
+    #app {
+        @apply max-h-full max-w-full -mt-16;
     }
-
+    
     .navbar-wrapper {
         @apply sticky flex flex-col justify-center;
         @apply top-0 mb-0 h-24 bg-base-100 z-10;
@@ -19,7 +23,8 @@
 
     .app-container {
         @apply relative flex flex-col justify-center items-start;
-        @apply max-h-full overflow-y-scroll mx-auto mt-36 xl:mt-8;
+        @apply max-h-screen overflow-y-scroll;
+        @apply mx-auto mt-36 xl:mt-0;
     }
 
     .menu-container {
@@ -38,7 +43,8 @@
 
     .articles-set-container {
         @apply flex flex-col;
-        @apply w-11/12 max-w-prose mx-auto px-6 xl:px-16 mt-4 pb-40 xl:mt-16;
+        @apply w-11/12 max-w-prose mx-auto;
+        @apply px-6 xl:px-16 mt-44 pb-40 xl:mt-56 overflow-y-scroll;
         @apply rounded-xl;
         @apply shadow-3xl shadow-base-300;
     }

@@ -37,6 +37,7 @@ export class ArticleViewerApp extends Component {
         this.stepsOuterContainer.render(this.element)        
         this.articlesSetContainer.render(this.element)
         this.updateSteps = this.updateSteps.bind(this);
+        this.articlesSetContainer.element.addEventListener('scroll', (event) => {this.updateSteps(event)});
     }
     async renderApp(into) {
         await this.articles.load();
@@ -54,9 +55,9 @@ export class ArticleViewerApp extends Component {
         })
 
         this.render(into);
-        this.element.addEventListener('scroll', this.updateSteps);
+        
     }
-    updateSteps(){
+    updateSteps(event){
         for (const articleId in this.steps.items) {
             const stepElement = this.steps.items[articleId].element;
             const articlesElement = this.articles.items[articleId].element
