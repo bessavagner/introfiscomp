@@ -6,9 +6,9 @@ from pathlib import Path
 
 class Markers:
     
-    title: re.Pattern = "#"
-    section: re.Pattern = "##"
-    subsection: re.Pattern = "###"
+    title: str = "#"
+    section: str = "##"
+    subsection: str = "###"
     code: str = "```"
     ul: str = "-"
     table: str = "|"
@@ -20,6 +20,7 @@ class Markers:
         return {
             cls.title,
             cls.section,
+            cls.subsection,
             cls.code,
             cls.ul,
             cls.table
