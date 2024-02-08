@@ -47,17 +47,23 @@
         @apply prose;
     }
 
-    .steps-container {
-        @apply fixed flex flex-row xl:flex-col justify-center xl:justify-between;
-        @apply w-full xl:w-fit h-32 xl:h-full;
+    .steps-outer-container {
+        @apply fixed h-40 xl:h-fit w-full xl:w-fit bg-base-100 mx-auto;
         @apply top-24 xl:top-40 mt-0;
         @apply left-1/2 transform -translate-x-1/2 xl:left-20 xl:translate-x-0;
-        @apply z-[2] overflow-y-scroll;
+        @apply z-[2];
+    }
+
+    .steps-inner-container {
+        @apply flex flex-row xl:flex-col justify-center xl:justify-between;
+        @apply w-11/12 xl:w-fit h-32 xl:h-full mx-auto overflow-y-scroll;
         @apply bg-base-100;
+        @apply rounded-xl;
+        @apply shadow-inner-xl shadow-base-300;
     }
 
     .steps-wrapper {
-        @apply steps steps-vertical text-2xl xl:text-lg;
+        @apply steps steps-vertical h-fit text-2xl xl:text-lg;
     }
 
     .steps-on-view {

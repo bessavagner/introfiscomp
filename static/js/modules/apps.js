@@ -28,11 +28,13 @@ export class ArticleViewerApp extends Component {
     constructor(jsonPath) {
         super('div', 'app-container');
         this.articlesSetContainer = new Component('div', 'articles-set-container');
-        this.stepsContainer = new Component('div', 'steps-container');
+        this.stepsOuterContainer = new Component('div', 'steps-outer-container');
+        this.stepsInnerContainer = new Component('div', 'steps-inner-container');
         this.articles = new ArticleSet(jsonPath, this.articlesSetContainer.element);
         this.steps = new Steps();
-        this.steps.render(this.stepsContainer.element);
-        this.stepsContainer.render(this.element)        
+        this.steps.render(this.stepsInnerContainer.element);
+        this.stepsInnerContainer.render(this.stepsOuterContainer.element);
+        this.stepsOuterContainer.render(this.element)        
         this.articlesSetContainer.render(this.element)
         this.updateSteps = this.updateSteps.bind(this);
     }
