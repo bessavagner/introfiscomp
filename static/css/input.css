@@ -77,7 +77,7 @@
     }
 
     .mockup-code-container:not(:first-of-type) {
-        @apply mb-10;
+        @apply mb-5;
     }
 
     .prose p {
