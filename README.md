@@ -1,20 +1,49 @@
 # Introdução à Física Computacional
 
-Este projeto tem duas finalizades:
+Este projeto tem duas finaliades:
 
-1. Praticar desenvolvimento web em uma applicação estática com as tecnologias:
+1. Praticar desenvolvimento web em uma applicação web (estática) com as tecnologias:
+   
    - html/css (tailwindcss como framework);
    - Javascript vanilla (frontend);
    - Flask (servidor/backend)
 
-2. Produzir material de consulta e estudo para os estudantes matriculados na disciplina de *Introdução à Física Computacional* do Instituto Federal de Educação, Ciências e Tecnologia do Estado do Ceará, *campus* Crateús, do curso de Licenciatura em Física.
+2. Produzir material de consulta e estudo para os estudantes matriculados na disciplina de *Introdução à Física Computacional* do Instituto Federal de Educação, Ciências e Tecnologia do Estado do Ceará, *campus* Crateús, do curso de Licenciatura em Física, assim como estudantes participantes do grupo de estudos _Programação E Desenvolvimento de Softwares Aplicados ao estudo e ensino da Física_
 
-## Editor
+Dessa forma, na tentativa de conformar ao máximo ao [SOLID](https://www.freecodecamp.org/news/solid-principles-for-better-software-design/), ao passo que pratico o desenolvimento de componentes HTML usando Javascript, esta applicação é um adaptador para criação e publicação de textos formatados em HTML, funcionando na suinte forma:
+
+1. Os textos devem ser produzidos em uma sintaxe mínima de Markdown.
+2. O _build_ da aplicação fazer o parse do texto em Markdown para json.
+3. Os arquivos json, templates e scripts são servidos ao cliente.
+4. Cliente cria os elementos (`<article>`) a partir dos dados em json
+
+Para estilos é usado [Tailwindcss](https://tailwindcss.com/), junto o plugin [tailwindcss/typography] e o plugin de componentes [DaisyUI](https://daisyui.com/).
+
+## Instalação (Linux)
+
+Clone ou baixe o repositório. Então:
+
+- **Build**: instala os requerimentos (Python), Tailwindcss e plugins. Você precisa ter o [node.js](https://nodejs.org/en) isntalado.
+```
+./run-build
+```
+
+- **Desenvolvimento**: neste modo, as alterações nos arquivos HTML, CSS, Javascript e Python são acompanhados pelo servidor de desenvolvimento e pelo _watchfiles_ do Tailwindcss.
+
+## Uso
+
+Você pode criar textos em formato Markdown, salvá-los na pasta de arquivos estáticos (`./static/articles/<page_name>`) e então rodar o _build_ (ou simplesmente `python build.py`, caso esteja no modo de desenvolvimento). Cada pasta que você cria no caminho `./static/articles/` corresponderá a uma página HTML em templates, e a um código gerador em `./static/js/`.
+
+### Regras
+
+1. Cada arquivo Mardown deve ser iniciado com zeros (`01_introducao.md`, `02_desenvolvimento.md`, ...).
+2. Confira a classe `app.articles.core.Markers` para saber quais marcadores são válidos, ou siga o modelo deste repositório (documentação ainda por escrever).
+3. [continua]
 
 Para produzir um artido a ser renderizado, você deve uma uma notação mínima de Markdow
 
-TODO:
-- Tablas:
+[continua]:
+- Tabelas:
   - apenas 1 header, seguido do separador, e as linhas em seguida
   - Espaço entre '|' e o restante. Modelo:
   
@@ -28,7 +57,7 @@ TODO:
 ```
 
 
-## Para desenvolvedores
+## Para desenvolvedores [documentação incompleta]
 
 Esta é uma documentação para componentes desta applicação web.
 
