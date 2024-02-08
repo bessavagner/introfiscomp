@@ -7,7 +7,7 @@
     body {
         @apply w-screen;
     }
-    
+
     .content {
         @apply max-w-full;
     }
@@ -20,7 +20,7 @@
         @apply relative flex flex-col justify-center items-start;
         @apply max-h-full overflow-y-scroll mx-auto mt-8;
     }
-    
+
     .menu-container {
         @apply w-full;
     }
@@ -39,7 +39,7 @@
         @apply flex flex-col;
         @apply w-11/12 max-w-md mx-auto px-6 xl:px-16 mt-4 pb-40 xl:mt-16;
         @apply rounded-xl;
-        @apply shadow-[0px_10px_15px_10px_rgba(0,0,0,0.3)] shadow-base-300;
+        @apply shadow-3xl shadow-base-300;
     }
 
     article {
@@ -60,7 +60,7 @@
         @apply mockup-code max-w-full;
     }
 
-    .mockup-code-container + .mockup-code-container {
+    .mockup-code-container+.mockup-code-container {
         @apply mt-5;
     }
 
@@ -72,16 +72,20 @@
         @apply overflow-x-hidden my-0 py-0;
     }
 
-    .mockup-code-wrapper > pre > code {
+    .mockup-code-wrapper>pre>code {
         @apply overflow-x-hidden;
     }
 
-    .mockup-code-wrapper {
-        @apply max-w-prose overflow-x-scroll;
+    .mockup-code-container:not(:first-of-type) {
+        @apply mb-10;
     }
 
     .prose p {
         @apply text-justify;
+    }
+
+    .prose h5 {
+        @apply mt-5 text-info;
     }
 
     .prose h4 {
