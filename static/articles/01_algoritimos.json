@@ -271,7 +271,7 @@
                             "p": "No exemplo acima, a variável <strong>área</strong> armazenará o valor <code>40</code>, que é o resultado da multiplicação da variável <code>base</code> pela variável <code>altura</code>."
                         },
                         {
-                            "p": "### Atribuição Condicional"
+                            "subsection": "Atribuição Condicional"
                         },
                         {
                             "p": "A atribuição condicional é uma forma de atribuir um valor a uma variável com base em uma condição. A condição é uma expressão booleana que pode ser avaliada como <code>verdadeiro</code> ou <code>falso</code>."
@@ -709,7 +709,7 @@
                             ]
                         },
                         {
-                            "p": "### Estrutura do comando PARA"
+                            "subsection": "Estrutura do comando PARA"
                         },
                         {
                             "p": "O comando PARA possui a seguinte estrutura:"
@@ -762,7 +762,7 @@
                             "p": "Note que neste exemplo acima, o número 5 não será exibido. Por quê?"
                         },
                         {
-                            "p": "### Estrutura do comando ENQUANTO"
+                            "subsection": "Estrutura do comando ENQUANTO"
                         },
                         {
                             "p": "O comando ENQUANTO possui a seguinte estrutura:"

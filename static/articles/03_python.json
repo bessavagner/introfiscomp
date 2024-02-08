@@ -29,13 +29,13 @@
                     "title": "Executando comandos Python",
                     "content": [
                         {
-                            "p": "### Interpretador interativo"
+                            "subsection": "Interpretador interativo"
                         },
                         {
                             "p": "Existem várias maneiras de executar comandos Python. Uma delas é usando o interpretador interativo do Python, que pode ser aberto digitando <code>python</code> no terminal (Linux, Mac OS) ou PowerShell (windows). No interpretador interativo, você pode digitar comandos Python e obter os resultados imediatamente."
                         },
                         {
-                            "p": "### Executando arquivos .py (scripts)"
+                            "subsection": "Executando arquivos .py (scripts)"
                         },
                         {
                             "p": "Outra maneira de executar comandos Python é criando um arquivo com extensão <code>.py</code> e executando-o usando o comando <code>python</code>. Por exemplo, se você criar um arquivo chamado <code>hello.py</code> com o seguinte conteúdo:"
@@ -51,6 +51,9 @@
                         },
                         {
                             "p": "python hello.py"
+                        },
+                        {
+                            "subsection": "GoogleColab"
                         },
                         {
                             "ul": [

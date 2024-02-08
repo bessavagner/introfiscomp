@@ -123,7 +123,7 @@
                             "p": "Antes, vamos definir o acesso aos elementos de uma lista."
                         },
                         {
-                            "p": "### 1. Acessar elementos (índices)"
+                            "subsection": "1. Acessar elementos (índices)"
                         },
                         {
                             "p": "Usamos a notação de índices (número inteiro entre par de colchetes) para representas o acesso de um elemento em uma lista. Listas são sequÊncias de elementos indexados, geralmente começado pelo índice zero:"
@@ -143,7 +143,7 @@
                             ]
                         },
                         {
-                            "p": "### 2. Adicionar elementos"
+                            "subsection": "2. Adicionar elementos"
                         },
                         {
                             "p": "Podemos definir uma função de nome <em>AdicionarAoFinal</em>:"
@@ -219,7 +219,7 @@
                             "p": "Daqui pra frente vamos preferir a notação de métodos de objetos."
                         },
                         {
-                            "p": "### 3. Remover elementos"
+                            "subsection": "3. Remover elementos"
                         },
                         {
                             "p": "Para remover elementos de uma lista ou vetor, podemos utilizar a operação de remoção. Existem duas formas comuns de remoção:"
@@ -244,7 +244,7 @@
                             ]
                         },
                         {
-                            "p": "### 4. Concatenação"
+                            "subsection": "4. Concatenação"
                         },
                         {
                             "p": "A concatenação é a operação de unir duas ou mais listas ou vetores em uma única lista ou vetor. Em pseudocódigo, podemos utilizar o operador \"+\" para realizar a concatenação."
@@ -261,7 +261,7 @@
                             ]
                         },
                         {
-                            "p": "### 5. Tamanho"
+                            "subsection": "5. Tamanho"
                         },
                         {
                             "p": "É muito comum que lingagens de programação modernas definam o método (ou função) de se obter diretamente o tamanho (número de elementos) em uma lista:"
@@ -337,13 +337,13 @@
                             "p": "Vamos use notação de métodos para apresentar operações em conjuntos aqui."
                         },
                         {
-                            "p": "### 1. Acessar elementos"
+                            "subsection": "1. Acessar elementos"
                         },
                         {
                             "p": "Em conjuntos, não podemos acessar elementos diretamente por índice, pois eles não são ordenados."
                         },
                         {
-                            "p": "### 2. Adicionar elementos"
+                            "subsection": "2. Adicionar elementos"
                         },
                         {
                             "p": "Para adicionar um elemento a um conjunto, podemos usar a operação adicionar. Essa operação verifica se o elemento já existe no conjunto e, se não existir, o adiciona."
@@ -356,7 +356,7 @@
                             ]
                         },
                         {
-                            "p": "### 3. Remover elementos"
+                            "subsection": "3. Remover elementos"
                         },
                         {
                             "p": "Para remover um elemento de um conjunto, podemos usar a operação remover. Essa operação verifica se o elemento existe no conjunto e, se existir, o remove."
@@ -369,7 +369,7 @@
                             ]
                         },
                         {
-                            "p": "### 4. Verificar se um elemento está presente"
+                            "subsection": "4. Verificar se um elemento está presente"
                         },
                         {
                             "p": "Para verificar se um elemento está presente em um conjunto, podemos usar a operação contem. Essa operação retorna True se o elemento estiver presente no conjunto e False caso contrário."
@@ -382,7 +382,7 @@
                             ]
                         },
                         {
-                            "p": "### 5. Operações entre conjuntos"
+                            "subsection": "5. Operações entre conjuntos"
                         },
                         {
                             "p": "Podemos realizar diversas operações entre conjuntos, como:"
@@ -466,7 +466,7 @@
                             ]
                         },
                         {
-                            "p": "### 1. Acessar valores"
+                            "subsection": "1. Acessar valores"
                         },
                         {
                             "p": "Para acessar um valor em um dicionário, podemos usar a operação obter. Essa operação recebe a chave do par chave-valor que queremos acessar e retorna o valor associado a essa chave."
@@ -482,7 +482,7 @@
                             ]
                         },
                         {
-                            "p": "### 2. Adicionar pares de chave-valor"
+                            "subsection": "2. Adicionar pares de chave-valor"
                         },
                         {
                             "p": "Para adicionar um par de chave-valor a um dicionário, podemos usar a operação adicionar. Essa operação recebe a chave e o valor do novo par e os adiciona ao dicionário."
@@ -495,7 +495,7 @@
                             ]
                         },
                         {
-                            "p": "### 3. Remover pares de chave-valor"
+                            "subsection": "3. Remover pares de chave-valor"
                         },
                         {
                             "p": "Para remover um par de chave-valor de um dicionário, podemos usar a operação remover. Essa operação recebe a chave do par que queremos remover e o remove do dicionário."
@@ -508,7 +508,7 @@
                             ]
                         },
                         {
-                            "p": "### 4. Verificar se uma chave está presente"
+                            "subsection": "4. Verificar se uma chave está presente"
                         },
                         {
                             "p": "Para verificar se uma chave está presente em um dicionário, podemos usar a operação contem. Essa operação recebe a chave que queremos verificar e retorna True se a chave estiver presente no dicionário e False caso contrário."
@@ -521,7 +521,7 @@
                             ]
                         },
                         {
-                            "p": "### 5. Iterar sobre os pares de chave-valor"
+                            "subsection": "5. Iterar sobre os pares de chave-valor"
                         },
                         {
                             "p": "Para iterar sobre os pares de chave-valor de um dicionário, podemos usar a operação iterar. Essa operação retorna uma sequência de pares de chave-valor, que podem ser iterados usando um laço for."
@@ -579,7 +579,7 @@
                             ]
                         },
                         {
-                            "p": "### Solução"
+                            "subsection": "Solução"
                         },
                         {
                             "mockupCodes": [
@@ -636,7 +636,7 @@
                             ]
                         },
                         {
-                            "p": "### Solução"
+                            "subsection": "Solução"
                         },
                         {
                             "mockupCodes": [
@@ -736,7 +736,7 @@
                             ]
                         },
                         {
-                            "p": "### Solução"
+                            "subsection": "Solução"
                         },
                         {
                             "p": "Crie um código que realize essa tarefa"
@@ -776,7 +776,7 @@
                             ]
                         },
                         {
-                            "p": "### Solução"
+                            "subsection": "Solução"
                         },
                         {
                             "mockupCodes": [
