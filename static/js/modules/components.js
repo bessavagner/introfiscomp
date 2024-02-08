@@ -251,10 +251,25 @@ export class Steps extends Component {
         li.setClassList('step');
         li.element.setAttribute('for', idItem);
         anchor.element.setAttribute('href', `#${idItem}`);
+        
         anchor.render(li.element);
         anchor.setContent(name);
         li.render(this.element);
         this.items[idItem] = li;
+
+        // Add click event listener to the anchor element
+        anchor.element.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetElement = document.getElementById(idItem);
+            if (targetElement) {
+                // Calculate the target position to scroll a little lower
+                const targetOffset = targetElement.offsetTop - 300; // Adjust the value as needed
+                targetElement.parentElement.scrollTo({
+                    top: targetOffset,
+                    behavior: 'smooth'
+                });
+            }
+        });
     }
 }
 

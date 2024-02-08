@@ -69,7 +69,7 @@
     }
 
     .steps-wrapper {
-        @apply steps steps-vertical h-fit text-2xl xl:text-lg;
+        @apply steps steps-vertical h-fit text-xl xl:text-lg;
     }
 
     .steps-on-view {

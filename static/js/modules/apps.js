@@ -63,7 +63,6 @@ export class ArticleViewerApp extends Component {
             skeleton.addItem(1);
         }
         skeleton.render(this.articlesSetContainer.element);
-        console.log(skeleton.element);
         while (
             (this.articles.numberOfArticles === 0  ||
             Object.keys(this.articles.items).length < this.articles.numberOfArticles)) {
@@ -82,11 +81,28 @@ export class ArticleViewerApp extends Component {
 
         
     }
-    updateSteps(event){
+    updateSteps(event) {
+        let lastStepId = null;
+    
+        // Find the ID of the last element with 'step-primary' class
+        for (const articleId in this.steps.items) {
+            if (this.steps.items[articleId].element.classList.contains('step-primary')) {
+                lastStepId = articleId;
+            }
+        }
+    
+        // If there's a last step found, scroll it into view
+        if (lastStepId !== null) {
+            const lastStepElement = this.steps.items[lastStepId].element;
+            lastStepElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    
+        // Iterate through all steps to update their classes
         for (const articleId in this.steps.items) {
             const stepElement = this.steps.items[articleId].element;
-            const articlesElement = this.articles.items[articleId].element
-            const halfWindowHeight = window.innerHeight / 2;
+            const articlesElement = this.articles.items[articleId].element;
+            const halfWindowHeight = window.innerHeight / 2 + 200;
+    
             if (!stepElement.classList.contains("step-primary")) {
                 if (articlesElement.getBoundingClientRect().top < halfWindowHeight) {
                     this.steps.items[articleId].addClass('step-primary');
@@ -98,4 +114,5 @@ export class ArticleViewerApp extends Component {
             }
         }
     }
+    
 }

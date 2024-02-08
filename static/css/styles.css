@@ -5995,8 +5995,8 @@ article h2 {
 .steps-wrapper {
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 1280px) {
@@ -6696,6 +6696,14 @@ article h2 {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
