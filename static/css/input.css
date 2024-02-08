@@ -44,7 +44,7 @@
     .articles-set-container {
         @apply flex flex-col;
         @apply w-11/12 max-w-prose mx-auto;
-        @apply px-6 xl:px-16 mt-44 pb-40 xl:mt-56 overflow-y-scroll;
+        @apply px-6 xl:px-16 mt-44 xl:mt-56 overflow-y-scroll;
         @apply rounded-xl;
         @apply shadow-3xl shadow-base-300;
     }
