@@ -38,7 +38,7 @@
 
     .articles-set-container {
         @apply flex flex-col;
-        @apply w-11/12 max-w-md mx-auto px-6 xl:px-16 mt-4 pb-40 xl:mt-16;
+        @apply w-11/12 max-w-prose mx-auto px-6 xl:px-16 mt-4 pb-40 xl:mt-16;
         @apply rounded-xl;
         @apply shadow-3xl shadow-base-300;
     }
@@ -48,18 +48,18 @@
     }
 
     .steps-outer-container {
-        @apply fixed h-40 xl:h-fit w-full xl:w-fit bg-base-100 mx-auto;
+        @apply fixed h-40 xl:h-fit w-11/12 xl:w-fit max-w-prose mx-auto;
         @apply top-24 xl:top-40 mt-0;
         @apply left-1/2 transform -translate-x-1/2 xl:left-20 xl:translate-x-0;
         @apply z-[2];
+        @apply bg-base-100;
     }
 
     .steps-inner-container {
         @apply flex flex-row xl:flex-col justify-center xl:justify-between;
-        @apply w-11/12 xl:w-fit h-32 xl:h-full mx-auto overflow-y-scroll;
-        @apply bg-base-100;
+        @apply w-11/12 xl:w-fit xl:max-w-fit h-32 xl:h-full mx-auto overflow-y-scroll;
         @apply rounded-xl;
-        @apply shadow-inner-xl shadow-base-300;
+        @apply shadow-inner-xl xl:shadow-none shadow-base-300;
     }
 
     .steps-wrapper {
