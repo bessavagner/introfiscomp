@@ -4758,19 +4758,6 @@ body {
   width: 100vw;
 }
 
-#content {
-  position: absolute;
-  top: 0px;
-  height: 100vh;
-  width: 100%;
-}
-
-#app {
-  margin-top: -4rem;
-  max-height: 100%;
-  max-width: 100%;
-}
-
 .navbar-wrapper {
   position: sticky;
   display: flex;
@@ -4784,6 +4771,19 @@ body {
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
+#content {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+#app {
+  margin-top: -4rem;
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .app-container {
   position: relative;
   display: flex;
@@ -4795,6 +4795,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 9rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 1280px) {
@@ -6226,8 +6227,16 @@ article h2 {
   margin-bottom: 10rem;
 }
 
+.-mt-16 {
+  margin-top: -4rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
@@ -6882,6 +6891,10 @@ article h2 {
 
   .xl\:top-40 {
     top: 10rem;
+  }
+
+  .xl\:mt-0 {
+    margin-top: 0px;
   }
 
   .xl\:mt-56 {

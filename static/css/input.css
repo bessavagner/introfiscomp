@@ -8,6 +8,11 @@
         @apply h-screen w-screen;
     }
     
+    .navbar-wrapper {
+        @apply sticky flex flex-col justify-center;
+        @apply top-0 mb-0 h-24 bg-base-100 z-10;
+    }
+    
     #content {
         @apply absolute top-0 h-screen w-full;
     }
@@ -15,16 +20,11 @@
     #app {
         @apply max-h-full max-w-full -mt-16;
     }
-    
-    .navbar-wrapper {
-        @apply sticky flex flex-col justify-center;
-        @apply top-0 mb-0 h-24 bg-base-100 z-10;
-    }
 
     .app-container {
         @apply relative flex flex-col justify-center items-start;
         @apply max-h-screen overflow-y-scroll;
-        @apply mx-auto mt-36 xl:mt-0;
+        @apply mx-auto mt-36 xl:mt-0 pb-4;
     }
 
     .menu-container {
