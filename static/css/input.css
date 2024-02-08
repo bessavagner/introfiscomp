@@ -18,7 +18,7 @@
 
     .app-container {
         @apply relative flex flex-col justify-center items-start;
-        @apply max-h-full overflow-y-scroll mx-auto mt-8;
+        @apply max-h-full overflow-y-scroll mx-auto mt-36 xl:mt-8;
     }
 
     .menu-container {
@@ -47,9 +47,15 @@
     }
 
     .steps-container {
-        @apply fixed hidden xl:block top-40 left-20;
-        @apply z-[2];
+        @apply fixed flex flex-row xl:flex-col justify-center xl:justify-between;
+        @apply w-full xl:w-fit h-28 xl:h-full;
+        @apply top-24 xl:top-40 left-1/2 transform -translate-x-1/2 xl:left-20 xl:translate-x-0;
+        @apply z-[2] overflow-y-scroll;
         @apply bg-base-100;
+    }
+
+    .steps-wrapper {
+        @apply steps steps-vertical text-2xl xl:text-lg;
     }
 
     .steps-on-view {

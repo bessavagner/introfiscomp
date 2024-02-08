@@ -30,7 +30,7 @@ export class ArticleViewerApp extends Component {
         this.articlesSetContainer = new Component('div', 'articles-set-container');
         this.stepsContainer = new Component('div', 'steps-container');
         this.articles = new ArticleSet(jsonPath, this.articlesSetContainer.element);
-        this.steps = new Steps('vertical', 'steps-element');
+        this.steps = new Steps();
         this.steps.render(this.stepsContainer.element);
         this.stepsContainer.render(this.element)        
         this.articlesSetContainer.render(this.element)

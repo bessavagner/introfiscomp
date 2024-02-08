@@ -240,21 +240,9 @@ class Article extends Component {
 }
 
 export class Steps extends Component {
-    constructor(type='vertical', classList=null) {
+    constructor() {
         super('ul');
-        switch (type) {
-            case 'vertical':
-                this.setClassList('steps steps-vertical');
-                break
-            case 'horizontal':
-                this.setClassList('steps');
-                break;
-            default:
-                throw Error(
-                    "Only 'vertical' or 'horizontal' are accepted as type"
-                );
-        }
-        this.addClass(classList);
+        this.setClassList('steps-wrapper');
         this.items = {}
     }
     addItem(name, idItem) {
