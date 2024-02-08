@@ -4,14 +4,21 @@
 
 @layer components {
 
+    body {
+        @apply w-screen;
+    }
+    
+    .content {
+        @apply max-w-full;
+    }
+
     .navbar {
         @apply h-20;
     }
 
     .app-container {
-        @apply relative flex flex-row justify-center items-start;
-        @apply max-h-screen min-w-fit overflow-y-scroll w-fit mx-auto mt-20;
-        @apply shadow-lg shadow-base-300;
+        @apply relative flex flex-col justify-center items-start;
+        @apply max-h-full overflow-y-scroll mx-auto mt-8;
     }
     
     .menu-container {
@@ -20,7 +27,7 @@
 
     .ul-menu {
         @apply menu menu-sm dropdown-content mt-3 z-10 p-2;
-        @apply shadow bg-base-300 rounded-box w-52;
+        @apply shadow rounded-box w-52;
         @apply text-xl;
     }
 
@@ -29,8 +36,14 @@
     }
 
     .articles-set-container {
-        @apply flex flex-col justify-center;
-        @apply w-fit mx-auto px-16 mt-40 pb-40 xl:mt-16;
+        @apply flex flex-col;
+        @apply w-11/12 max-w-md mx-auto px-6 xl:px-16 mt-4 pb-40 xl:mt-16;
+        @apply rounded-xl;
+        @apply shadow-[0px_10px_15px_10px_rgba(0,0,0,0.3)] shadow-base-300;
+    }
+
+    article {
+        @apply prose;
     }
 
     .steps-container {
@@ -43,16 +56,28 @@
         @apply step-primary;
     }
 
-    .mockup-code pre {
-        @apply my-0 py-0;
-    }
-
-    .mockup-code {
-        @apply overflow-x-scroll;
+    .mockup-code-container {
+        @apply mockup-code max-w-full;
     }
 
     .mockup-code-container + .mockup-code-container {
         @apply mt-5;
+    }
+
+    .mockup-code-wrapper {
+        @apply overflow-x-scroll w-fit;
+    }
+
+    .mockup-code-wrapper pre {
+        @apply overflow-x-hidden my-0 py-0;
+    }
+
+    .mockup-code-wrapper > pre > code {
+        @apply overflow-x-hidden;
+    }
+
+    .mockup-code-wrapper {
+        @apply max-w-prose overflow-x-scroll;
     }
 
     .prose p {
@@ -64,7 +89,7 @@
     }
 
     .prose h3 {
-        @apply text-cyan-600 text-3xl mt-4;
+        @apply text-cyan-600 mt-4;
     }
 
     .prose h2 {
@@ -72,6 +97,6 @@
     }
 
     .problema-container {
-        @apply border-2 border-neutral-600 rounded-xl w-full mt-2 px-4;
+        @apply border-2 border-neutral-600 rounded-xl w-full mt-2;
     }
 }

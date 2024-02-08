@@ -56,8 +56,8 @@ class MockupCode extends Component {
     constructor() {
         super('div');
         this.codeContainer = new Component('div');
-        this.codeContainer.element.classList = "mockup-code";
-        this.element.classList = "mockup-code-container max-w-full overflow-x-scroll";
+        this.codeContainer.element.classList = "mockup-code-wrapper";
+        this.element.classList = "mockup-code-container";
         this.codeContainer.render(this.element);
         this.addCodes = this.addCodes.bind(this);
     }
@@ -172,7 +172,6 @@ class Article extends Component {
         this.element.id = randomId();
         this.heading = new Heading("", '3');
         this.heading.render(this.element);
-        this.element.classList = "prose";
         if (title) { this.setTitle(title); }
         if (leadText) { this.addLead(leadText); }
     }
