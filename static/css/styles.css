@@ -4761,8 +4761,17 @@ body {
   max-width: 100%;
 }
 
-.navbar {
-  height: 5rem;
+.navbar-wrapper {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0px;
+  z-index: 10;
+  margin-bottom: 0px;
+  height: 6rem;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .app-container {
@@ -5722,7 +5731,7 @@ article h2 {
 }
 
 .steps-container {
-  height: 7rem;
+  height: 8rem;
   width: 100%;
 }
 
@@ -5736,6 +5745,16 @@ article h2 {
 
 .steps-container {
   top: 6rem;
+  margin-top: 0px;
+}
+
+@media (min-width: 1280px) {
+  .steps-container {
+    top: 10rem;
+  }
+}
+
+.steps-container {
   left: 50%;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5743,7 +5762,6 @@ article h2 {
 
 @media (min-width: 1280px) {
   .steps-container {
-    top: 10rem;
     left: 5rem;
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6103,6 +6121,10 @@ article h2 {
   left: 5rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-20 {
   top: 5rem;
 }
@@ -6152,6 +6174,10 @@ article h2 {
 .my-40 {
   margin-top: 10rem;
   margin-bottom: 10rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .ml-24 {
@@ -6246,12 +6272,20 @@ article h2 {
   height: 2.5rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
 
 .h-28 {
   height: 7rem;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .h-5 {
