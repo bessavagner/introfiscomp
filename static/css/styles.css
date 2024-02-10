@@ -5106,9 +5106,14 @@ body {
 .ul-menu {
   z-index: 10;
   margin-top: 0.75rem;
-  padding: 0.5rem;
-  width: 13rem;
+  margin-left: 2.5rem;
+  padding: 2rem;
+  width: 360px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -5116,12 +5121,9 @@ body {
   line-height: 1.75rem;
 }
 
-.ul-menu-item {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
-  padding: 0.5rem;
+.ul-menu summary, .ul-menu a {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .articles-set-container {
@@ -5731,17 +5733,17 @@ article h2 {
   position: fixed;
   margin-left: auto;
   margin-right: auto;
-  height: 10rem;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 91.666667%;
-  max-width: 24rem;
+  max-width: 65ch;
 }
 
 @media (min-width: 1280px) {
   .steps-outer-container {
-    height: -moz-fit-content;
-    height: fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    max-width: 24rem;
   }
 }
 
@@ -5792,7 +5794,7 @@ article h2 {
 .steps-inner-container {
   margin-left: auto;
   margin-right: auto;
-  height: 8rem;
+  height: 7rem;
   width: 91.666667%;
   overflow-y: scroll;
 }
@@ -6305,6 +6307,10 @@ article h2 {
   left: 5rem;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -6327,10 +6333,6 @@ article h2 {
 
 .top-40 {
   top: 10rem;
-}
-
-.left-5 {
-  left: 1.25rem;
 }
 
 .isolate {
@@ -6581,6 +6583,10 @@ article h2 {
   width: 24rem;
 }
 
+.w-\[360px\] {
+  width: 360px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -6787,8 +6793,17 @@ article h2 {
   background-color: inherit;
 }
 
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-0 {
@@ -7058,11 +7073,6 @@ article h2 {
     margin-top: 14rem;
   }
 
-  .xl\:h-fit {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-
   .xl\:h-full {
     height: 100%;
   }
@@ -7075,6 +7085,10 @@ article h2 {
   .xl\:max-w-fit {
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+
+  .xl\:max-w-sm {
+    max-width: 24rem;
   }
 
   .xl\:flex-col {
