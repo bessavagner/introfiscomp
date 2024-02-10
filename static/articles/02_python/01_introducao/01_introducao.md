@@ -22,7 +22,7 @@ Existem várias maneiras de executar comandos Python. Uma delas é usando o inte
 
 Outra maneira de executar comandos Python é criando um arquivo com extensão `.py` e executando-o usando o comando `python`. Por exemplo, se você criar um arquivo chamado `hello.py` com o seguinte conteúdo:
 
-```python
+```
 print("Hello, world!")
 ```
 
@@ -38,7 +38,7 @@ Isso fará com que o programa Python seja executado e o texto "Hello, world!" se
 
 O Google Colab é um ambiente de desenvolvimento interativo baseado na nuvem que permite aos usuários executar código Python em seus navegadores. Ele é gratuito e fácil de usar, tornando-o uma ótima opção para iniciantes em Python ou para aqueles que desejam executar código Python sem precisar instalar nada em seus computadores.
 
-Para usar o Google Colab, basta acessar o site https://colab.research.google.com e criar uma conta gratuita. Depois de criar sua conta, você pode criar um novo notebook clicando no botão "New Notebook".
+Para usar o Google Colab, basta acessar o site <a href="https://colab.research.google.com">colab.research.google.com</a> e criar uma conta gratuita. Depois de criar sua conta, você pode criar um novo notebook clicando no botão "New Notebook".
 
 Um notebook do Google Colab é composto por células, que podem ser de texto ou de código. As células de texto podem ser usadas para escrever documentação, explicações ou comentários. As células de código podem ser usadas para escrever código Python que será executado no ambiente do Google Colab.
 
