@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Process Markdown files and parse to json
+# Process files and parse data to json
 python build.py
 # Start the Python server
 python server.py &

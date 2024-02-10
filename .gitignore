@@ -22,6 +22,7 @@ dist/
 
 # Local development files
 .env
+explore_app.ipynb
 
 # IDE and editor files
 .vscode/
@@ -30,3 +31,6 @@ dist/
 # Miscellaneous
 .DS_Store
 *.swp
+
+# Project build output
+*processed/

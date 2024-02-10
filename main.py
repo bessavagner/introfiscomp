@@ -4,12 +4,10 @@ from asgiref.wsgi import WsgiToAsgi
 from flask import Flask, send_from_directory
 from flask import render_template
 
-from app.settings import TEMPLATES_DIR, STATIC_DIR
+from app.settings import STATIC_DIR
 
 flask_app = Flask(__name__)
 asgi_flask_app = WsgiToAsgi(flask_app)
-
-logger = logging.getLogger('default')
 
 @flask_app.route("/")
 def serve_home():
@@ -18,8 +16,8 @@ def serve_home():
 
 @flask_app.route("/<path:name>")
 def serve_section(name):
-    template = f"{name}.html"
-    return render_template(template)
+    template = Path('processed') / f"{name}.html"
+    return render_template(str(template))
 
 @flask_app.route("/static/<path:filename>")
 def serve_static(filename):
