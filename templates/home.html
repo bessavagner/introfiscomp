@@ -4,6 +4,21 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-    <div id="app"></div>
+    <div id="app">
+      <div class="hero min-h-screen bg-base-100">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold my-8">Olá</h1>
+            <h2 class="text-2xl font-bold my-8">Introdução à Física Computacional</h2>
+            <p class="py-2">
+              Conteúdo elaborado pelo Prof. Vagner Bessa
+            </p>
+            <div class="dropdown dropdown-bottom dropdown-end" id="dropdown-hero">
+              <div tabindex="0" role="button" class="btn m-1">Começe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/static/js/home.js"></script>
 {% endblock %}
-<script type="module" src="/static/js/home.js"></script>

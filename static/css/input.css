@@ -17,7 +17,7 @@
         @apply absolute top-0 h-screen w-full;
     }
 
-    h1 {
+    #app > h1 {
         @apply absolute top-28;
         @apply left-1/2 transform -translate-x-1/2;
         @apply text-3xl;
@@ -32,13 +32,19 @@
         @apply mx-auto mt-36 xl:mt-0 pb-4;
     }
     .menu-container {
-        @apply w-full;
+        @apply w-full h-fit;
     }
 
     .ul-menu {
         @apply menu menu-sm dropdown-content mt-3 z-10 p-8 ml-10;
         @apply bg-base-300 shadow rounded-box min-w-fit w-[360px];
         @apply text-xl;
+    }
+
+    .ul-menu-hero {
+        @apply dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52;
+        @apply bg-base-300 shadow rounded-box w-56 xl:w-[360px] min-w-fit;
+        @apply text-sm xl:text-xl;
     }
 
     .ul-menu summary, .ul-menu a {
