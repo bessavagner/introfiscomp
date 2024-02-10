@@ -1,4 +1,4 @@
-# Introdução à linguagem de programação Python
+# Introdução
 
 Python é uma linguagem de programação de alto nível, interpretada, de propósito geral e orientada a objetos. Criada por <a href="https://pt.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> e lançada pela primeira vez em 1991, a Python tem uma filosofia de design que enfatiza a legibilidade do código, simplicidade e produtividade.
 
