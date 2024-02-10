@@ -158,6 +158,11 @@ class List extends Component {
         li.setContent(item);
         li.render(this.element);
     }
+    addComponent(component) {
+        const li = new Component('li');
+        component.render(li.element)
+        li.render(this.element);
+    }
     addItems(items) {
         for (const item of items) {
             this.addItem(item);
@@ -395,7 +400,8 @@ export class Menu extends Component {
             ul.addItem(anchor.element.outerHTML);
         });
         ul.render(detailsComponent.element);
-        detailsComponent.render(this.ul.element);
+        this.ul.addComponent(detailsComponent);
+        // detailsComponent.render(this.ul.element);
     }
     load() {
         const configRequest = new Request(this.jsonPath, {
