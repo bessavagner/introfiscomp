@@ -9,6 +9,7 @@ class Markers:
     title: str = "#"
     section: str = "##"
     subsection: str = "###"
+    subsubsection: str = "####"
     code: str = "```"
     ul: str = "-"
     table: str = "|"
@@ -21,6 +22,7 @@ class Markers:
             cls.title,
             cls.section,
             cls.subsection,
+            cls.subsubsection,
             cls.code,
             cls.ul,
             cls.table
@@ -80,7 +82,8 @@ class Section:
                     unordered_list: List[str] = None,
                     ordered_list: List[str] = None,
                     table: dict[str, List] = None,
-                    subsection: str = None):
+                    subsection: str = None,
+                    subsubsection: str = None):
         if texts:
             if isinstance(texts, list):
                 if len(texts) == 1:
@@ -109,6 +112,9 @@ class Section:
 
         if subsection:
             self.content.elements.append({"subsection": subsection})
+
+        if subsubsection:
+            self.content.elements.append({"subsubsection": subsubsection})
 
     def json(self,) -> dict:
         return {

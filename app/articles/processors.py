@@ -60,9 +60,12 @@ class MarkdownParser:
                     article.sections[-1].title = line.split(
                         Markers.section
                     )[-1].strip()
-                if marker == Markers.subsection:
+                elif marker == Markers.subsection:
                     title = line.split(Markers.subsection)[-1].strip()
                     article.sections[-1].add_content(subsection=title)
+                elif marker == Markers.subsubsection:
+                    title = line.split(Markers.subsubsection)[-1].strip()
+                    article.sections[-1].add_content(subsubsection=title)
                 elif marker == Markers.code:
                     if extracting_code:
                         extracting_code = False

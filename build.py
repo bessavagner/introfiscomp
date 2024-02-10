@@ -99,6 +99,7 @@ def process_data():
                 template_path.parent.mkdir(parents=True, exist_ok=True)
                 write_article_template(
                     section_data["title"],
+                    f"{menu[index]['title']} - {section_data['title']}",
                     js_path.relative_to(STATIC_DIR).with_suffix('.js'),
                     template_path.with_suffix('.html')
                 )
@@ -125,6 +126,7 @@ def process_data():
             )
             template_path = TEMPLATES_PROCESSED_DIR / menu[index]["url"]
             write_article_template(
+                menu[index]["title"],
                 menu[index]["title"],
                 js_path.relative_to(STATIC_DIR).with_suffix('.js'),
                 template_path.with_suffix('.html')

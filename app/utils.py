@@ -26,12 +26,18 @@ def normalize_string(input_string):
     return normalized_string
 
 
-def write_article_template(title, js, path):
+def write_article_template(title, articles_set_title, js, path):
     template = ''
     with open(ARTICLE_TEMPLATE_DIR, 'r', encoding='utf-8') as html:
         template = html.read()
     with open(path, 'w', encoding='utf-8') as html:
-        html.write(template.format(title=title, javascript=js))
+        html.write(
+            template.format(
+                title=title,
+                articles_set_title=articles_set_title,
+                javascript=js
+            )
+        )
 
 def write_article_js(url, path, subfolder=False):
     template = ''

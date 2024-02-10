@@ -4778,8 +4778,18 @@ body {
   width: 100%;
 }
 
+h1 {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 #app {
-  margin-top: -4rem;
+  margin-top: -2rem;
   max-height: 100%;
   max-width: 100%;
 }

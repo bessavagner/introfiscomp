@@ -201,6 +201,10 @@ class Article extends Component {
         this.addHeading(title, '5');
     }
 
+    addSubSubSection(title) {
+        this.addHeading(title, '6');
+    }
+
     addParagraph(text) {
         const p = new ParagraphJustified(text);
         p.render(this.element);
@@ -226,6 +230,13 @@ class Article extends Component {
         mockupCode.addCodes(codes);
         mockupCode.render(this.element);
     }
+
+    addCode(code) {
+        const mockupCode = new MockupCode();
+        mockupCode.addCode(code);
+        mockupCode.render(this.element);
+    }
+
     async addCodeFromFile(path) {
         const mockupCode = new MockupCode();
         await mockupCode.addCodesFromFile(path);
@@ -328,7 +339,10 @@ export class ArticleSet {
                                     await article.addCodeFromFile(content.mockupCodePath);
                                 }
                                 if (content.mockupCodes) {
-                                    article.addCodes(content.mockupCodes, content.p);
+                                    article.addCodes(content.mockupCodes);
+                                }
+                                if (content.mockupCode) {
+                                    article.addCode(content.mockupCode);
                                 }
                                 if (content.p) {
                                     article.addParagraph(content.p);
@@ -344,6 +358,9 @@ export class ArticleSet {
                                 }
                                 if (content.subsection) {
                                     article.addSubSection(content.subsection);
+                                }
+                                if (content.subsubsection) {
+                                    article.addSubSubSection(content.subsubsection);
                                 }
                             }
                         }
