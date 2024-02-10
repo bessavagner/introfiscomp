@@ -1,12 +1,12 @@
-import {{ ArticleViewerApp }} from "./modules/apps.js";
+import {{ ArticleViewerApp }} from "../modules/apps.js";
 
-const path = "/{url}";
+const path = "/static/{url}";
 const app = new ArticleViewerApp(path);
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", async function () {{
     
     console.log('Sanity check!');
     
     const appElement = document.getElementById('app');
     await app.renderApp(appElement);
-});
+}});

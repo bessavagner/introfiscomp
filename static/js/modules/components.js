@@ -290,6 +290,9 @@ export class ArticleSet {
         fetch(configRequest)
             .then(async (response) => {
                 if (!response.ok || response.status != 200) {
+                    console.error(
+                        `Path: ${this.jsonPath}\nResponse:${response}`
+                    )
                     throw Error(
                         `Error (${response.status}): ${response.statusText}`
                     );
@@ -359,42 +362,40 @@ export class Menu extends Component {
         this.ul.render(this.element);
         this.jsonPath = jsonPath;
     }
-    addItems(title, items) {
-        if (items) {
-            
-            if (items.length > 0) {
-                if (items.length == 1 && items[0].subtitle) {
-                    const anchor = Component('a');
-                    const li = new Component('li');
-                    if (!items[0].path) throw Error(
-                        `'subtitle' and 'title' properties must be provided: ${items[0]}`
-                    )
-                    anchor.element.setAttribute('href', items[0].path);
-                    anchor.render(li.element);
-                    this.ul.addItem(anchor.element);
-                } else {
-                    const detailsComponent = new Component('details');
-                    const summary = new Component('summary');
-                    const ul = new List(null, 'ul');
-                    summary.setContent(title);
-                    summary.render(detailsComponent.element);
-                    items.forEach((item) => {
-                        if (!item.subtitle && !item.path || item.subtitle == null && item.path == null) {
-                            throw Error(
-                                `'subtitle' and 'title' properties must be provided: ${item}`
-                                )
-                        }
-                        const anchor = new Component('a');
-                        // console.log(item.subtitle, item.path);
-                        anchor.element.setAttribute('href', item.path);
-                        anchor.setContent(item.subtitle);
-                        ul.addItem(anchor.element.outerHTML);
-                    })
-                    ul.render(detailsComponent.element);
-                    detailsComponent.render(this.ul.element);
-                }
-            }
+
+    addSection(title, url) {
+        const anchor = new Component('a');
+        const li = new Component('li');
+        if (!title || !url) {
+            throw Error("Both 'title' and 'url' must be provided");
         }
+        anchor.element.setAttribute('href', url);
+        anchor.render(li.element);
+        anchor.setContent(title);
+        li.render(this.ul.element);
+    }
+    addSubSections(title, subsections) {
+        if (!subsections || subsections.length == 0) {
+            throw Error("subsections must be provided")
+        }
+        const detailsComponent = new Component('details');
+        const summary = new Component('summary');
+        const ul = new List(null, 'ul');
+        summary.setContent(title);
+        summary.render(detailsComponent.element);
+        subsections.forEach((item) => {
+            if (!item.title || !item.url) {
+                throw Error(
+                    `'title' and 'url' properties must be provided: ${item}`
+                    );
+            }
+            const anchor = new Component('a');
+            anchor.element.setAttribute('href', item.url);
+            anchor.setContent(item.title);
+            ul.addItem(anchor.element.outerHTML);
+        });
+        ul.render(detailsComponent.element);
+        detailsComponent.render(this.ul.element);
     }
     load() {
         const configRequest = new Request(this.jsonPath, {
@@ -417,13 +418,24 @@ export class Menu extends Component {
                     console.error(`Expected 'index' attribute: ${data}`);
                     throw Error("Missing 'index' attribute");
                 }
-                Object.keys(data.index).forEach((key) => {
-                    Object.keys(data.index[key]).forEach((title) =>{
-                        if (data.index[key][title]) {
-                            this.addItems(title, data.index[key][title])
+                const menuItems = data.index;
+                for (const key in menuItems) {
+                    if (!menuItems[key].title) {
+                        throw Error(
+                            `Menu item must contain 'title': ${menuItems[key]}`
+                        );
+                    }
+                    if (menuItems[key].sections) {
+                        if (menuItems[key].sections.length == 0) {
+                            throw Error(
+                                `Menu item must contain non empty 'sections': ${menuItems[key]}`
+                            );
                         }
-                    })
-                })
+                        this.addSubSections(menuItems[key].title, menuItems[key].sections);
+                    } else {
+                        this.addSection(menuItems[key].title, menuItems[key].url);
+                    }
+                }
             });
     }
 }

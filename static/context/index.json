@@ -1,32 +1,34 @@
 {
     "index": {
         "01": {
-            "algoritimos": [
+            "title": " Introdução",
+            "sections": [
                 {
-                    "subtitle": "Algoritimos",
-                    "path": "/01_algoritimos/01_algoritimos"
+                    "title": " Algorítimos e extruturas de execução",
+                    "jsonPath": "/articles_processed/01_introducao/01_algoritimos.json",
+                    "url": "/01_introducao/01_algoritimos"
                 },
                 {
-                    "subtitle": "Estruturas",
-                    "path": "/01_algoritimos/02_estruturas"
+                    "title": " Estruturas de dados",
+                    "jsonPath": "/articles_processed/01_introducao/02_estruturas.json",
+                    "url": "/01_introducao/02_estruturas"
                 }
             ]
         },
         "02": {
-            "python": [
+            "title": " Python",
+            "sections": [
                 {
-                    "subtitle": "Variaveis e tipos de dados",
-                    "path": "/02_python/01_variaveis-e-tipos-de-dados"
-                },
-                {
-                    "subtitle": "Funcoes condicionais e lacos",
-                    "path": "/02_python/03_funcoes-condicionais-e-lacos"
-                },
-                {
-                    "subtitle": "Introducao",
-                    "path": "/02_python/01_introducao"
+                    "title": " Introdução",
+                    "jsonPath": "/articles_processed/02_python/01_introducao.json",
+                    "url": "/02_python/01_introducao"
                 }
             ]
+        },
+        "03": {
+            "title": " Bibliotecas especiais",
+            "jsonPath": "/articles_processed/03_bibliotecas.json",
+            "url": "/03_bibliotecas"
         }
     }
 }
