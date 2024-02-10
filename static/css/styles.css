@@ -5733,7 +5733,7 @@ article h2 {
   margin-right: auto;
   height: 10rem;
   width: 91.666667%;
-  max-width: 65ch;
+  max-width: 24rem;
 }
 
 @media (min-width: 1280px) {
@@ -5764,7 +5764,7 @@ article h2 {
 
 @media (min-width: 1280px) {
   .steps-outer-container {
-    left: 5rem;
+    left: 1.25rem;
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
@@ -6329,6 +6329,10 @@ article h2 {
   top: 10rem;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -6630,6 +6634,10 @@ article h2 {
 
 .max-w-screen-md {
   max-width: 768px;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .flex-1 {
@@ -7034,8 +7042,8 @@ article h2 {
 }
 
 @media (min-width: 1280px) {
-  .xl\:left-20 {
-    left: 5rem;
+  .xl\:left-5 {
+    left: 1.25rem;
   }
 
   .xl\:top-40 {

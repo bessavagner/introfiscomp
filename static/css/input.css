@@ -54,9 +54,9 @@
     }
 
     .steps-outer-container {
-        @apply fixed h-40 xl:h-fit w-11/12 xl:w-fit max-w-prose mx-auto;
+        @apply fixed h-40 xl:h-fit w-11/12 xl:w-fit max-w-sm mx-auto;
         @apply top-24 xl:top-40 mt-0;
-        @apply left-1/2 transform -translate-x-1/2 xl:left-20 xl:translate-x-0;
+        @apply left-1/2 transform -translate-x-1/2 xl:left-5 xl:translate-x-0;
         @apply z-[2];
         @apply bg-base-100;
     }
