@@ -8,6 +8,7 @@ from app.settings import (
     DEBUG
 )
 
+RELOAD = True
 RELOAD_INCLUDES = [
     "templates/*.html",
     "templates/**/*.html",
@@ -17,6 +18,7 @@ RELOAD_INCLUDES = [
 ]
 
 if not DEBUG:
+    RELOAD = False
     RELOAD_INCLUDES = None
 
 
