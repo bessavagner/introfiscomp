@@ -9,9 +9,31 @@ As funções são uma parte essencial da programação em Python e são usadas p
 
 O Python possui um grande número de funções internas (_built-ins_) que podem ser usadas para realizar uma variedade de tarefas comuns. Essas funções são incorporadas à linguagem e estão sempre disponíveis para uso.
 
-## Função `print`
+## Função print()
 
 Uma das funções internas mais comuns é a função `print()`. Esta função é usada para exibir dados na tela. Por exemplo, o seguinte código exibe a mensagem "Olá, mundo!" na tela:
+
+## Função input()
+
+Outra função interna útil é a função input(). Esta função permite que você receba entrada do usuário durante a execução do programa. Ela espera que o usuário insira algum texto via teclado e retorna essa entrada como uma string.
+
+```
+nome = input("Por favor, digite seu nome: ")
+print("Olá, " + nome + "! Bem-vindo!")
+
+```
+Neste exemplo, o programa solicita ao usuário que digite seu nome. A entrada do usuário é armazenada na variável nome, e em seguida, uma mensagem de boas-vindas é exibida junto com o nome inserido pelo usuário.
+
+É importante notar que a função `input()` sempre retorna uma string, mesmo que o usuário insira um número ou outro tipo de dado. Se você precisar de um tipo diferente de dado, como um número inteiro ou ponto flutuante, precisará converter explicitamente a entrada usando as funções de conversão de tipo do Python, como `int()` ou `float()`. Por exemplo:
+
+Isso garantirá que a entrada do usuário seja interpretada como um número inteiro.
+
+```
+idade = int(input("Por favor, digite sua idade: "))
+```
+
+
+
 
 ```
 print("Olá, mundo!")
