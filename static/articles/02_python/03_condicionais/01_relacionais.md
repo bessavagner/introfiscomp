@@ -1,4 +1,4 @@
-# Operadores relacionais
+# Operadores Relacionais
 
 Os operadores relacionais são essenciais na programação, pois permitem comparar valores, facilitando a tomada de decisões e o controle do fluxo do programa. Eles sempre retornam um valor booleano (`True` ou `False`), dependendo do resultado da comparação entre os valores.
 
@@ -6,42 +6,42 @@ Os operadores relacionais são essenciais na programação, pois permitem compar
 
 Este operador verifica se dois valores são exatamente iguais. É importante diferenciar o operador de igualdade (`==`) do operador de atribuição (`=`).
 
-```python
+```
 # Comparando números
-numero1 = 10
-numero2 = 10
-print(numero1 == numero2)  # Saída: True
+numero_1 = 10
+numero_2 = 10
+print(numero_1 == numero_2)  # Saída: True
 
 # Comparando strings
-texto1 = "Python"
-texto2 = "python"
-print(texto1 == texto2)  # Saída: False
+texto_1 = "Python"
+texto_2 = "python"
+print(texto_1 == texto_2)  # Saída: False
 ```
 
 ## Diferente de (!=)
 
 Verifica se dois valores não são iguais. Se forem diferentes, o resultado é `True`.
 
-```python
+```
 # Exemplo com números
-valor1 = 100
-valor2 = 200
-print(valor1 != valor2)  # Saída: True
+valor_1 = 100
+valor_2 = 200
+print(valor_1 != valor_2)  # Saída: True
 
 # Exemplo com strings
-nome1 = "Alice"
-nome2 = "Bob"
-print(nome1 != nome2)  # Saída: True
+nome_1 = "Alice"
+nome_2 = "Bob"
+print(nome_1 != nome_2)  # Saída: True
 ```
 
 ## Maior que (>)
 
 Avalia se o valor à esquerda do operador é maior que o valor à direita.
 
-```python
-idadePedro = 18
-idadeMaria = 21
-print(idadePedro > idadeMaria)  # Saída: False
+```
+idade_pedro = 18
+idade_maria = 21
+print(idade_pedro > idade_maria)  # Saída: False
 
 # Comparando valores em uma lista
 notas = [7, 8, 9, 10]
@@ -52,10 +52,10 @@ print(max(notas) > 9)  # Saída: True
 
 Verifica se o valor à esquerda é menor que o valor à direita.
 
-```python
-peso1 = 55.5
-peso2 = 60.0
-print(peso1 < peso2)  # Saída: True
+```
+peso_1 = 55.5
+peso_2 = 60.0
+print(peso_1 < peso_2)  # Saída: True
 
 # Utilizando em condições climáticas
 temperatura = 30
@@ -66,28 +66,28 @@ print(temperatura < 25)  # Saída: False
 
 Confirma se o valor à esquerda é maior ou igual ao valor à direita.
 
-```python
-saldoConta = 500
+```
+saldo_conta = 500
 compra = 500
-print(saldoConta >= compra)  # Saída: True
+print(saldo_conta >= compra)  # Saída: True
 
 # Avaliando notas
-notaAluno = 7.5
-notaMinima = 7.0
-print(notaAluno >= notaMinima)  # Saída: True
+nota_aluno = 7.5
+nota_minima = 7.0
+print(nota_aluno >= nota_minima)  # Saída: True
 ```
 
 ## Menor ou igual a (<=)
 
 Verifica se o valor à esquerda é menor ou igual ao valor à direita.
 
-```python
-alturaMuro = 2.5  # metros
-alturaEscada = 3.0  # metros
-print(alturaMuro <= alturaEscada)  # Saída: True
+```
+altura_muro = 2.5  # metros
+altura_escada = 3.0  # metros
+print(altura_muro <= altura_escada)  # Saída: True
 
 # Comparando idades
-idadeMinima = 18
-candidatoIdade = 16
-print(candidatoIdade <= idadeMinima)  # Saída: True
+idade_minima = 18
+candidato_idade = 16
+print(candidato_idade <= idade_minima)  # Saída: True
 ```

@@ -1,12 +1,12 @@
 # Estrutura de execução condicional
 
-As estruturas condicionais são cruciais para direcionar o fluxo de execução do programa com base em condições.
+As estruturas condicionais são cruciais para direcionar o_fluxo_de_execução do programa com base em condições.
 
 ## Estrutura if
 
 Utilizada para executar um bloco de código apenas se uma condição for verdadeira.
 
-```python
+```
 idade = 20
 if idade >= 18:
     print("Você tem permissão para dirigir.")
@@ -16,7 +16,7 @@ if idade >= 18:
 
 Permite executar um bloco de código se a condição for verdadeira e outro bloco se for falsa.
 
-```python
+```
 saldo = 500
 saque = 600
 if saldo >= saque:
@@ -29,7 +29,7 @@ else:
 
 Usada para avaliar múltiplas condições de forma sequencial.
 
-```python
+```
 nota = 85
 if nota >= 90:
     print("Aprovado com louvor!")
@@ -43,7 +43,7 @@ else:
 
 Consiste em colocar uma estrutura condicional dentro de outra, permitindo criar lógicas mais complexas.
 
-```python
+```
 hora = 11
 if hora < 12:
     print("Bom dia!")

@@ -6,40 +6,40 @@ Os operadores lógicos são usados para combinar expressões booleanas. Eles sã
 
 Retorna `True` apenas se ambas as expressões booleanas forem verdadeiras.
 
-```python
-temperatura = 22
-clima = "ensolarado"
-print(temperatura > 20 and clima == "ensolarado")  # Saída: True
+```
+temperature = 22
+weather = "ensolarado"
+print(temperature > 20 and weather == "ensolarado")  # Saída: True
 
 # Verificando se um número está dentro de um intervalo
-numero = 15
-print(numero > 10 and numero < 20)  # Saída: True
+number = 15
+print(number > 10 and number < 20)  # Saída: True
 ```
 
 ## 'Ou' lógico (or)
 
 Retorna `True` se pelo menos uma das expressões booleanas for verdadeira.
 
-```python
-dia = "sábado"
-feriado = False
-print(dia == "domingo" or feriado)  # Saída: False
+```
+day = "sábado"
+holiday = False
+print(day == "domingo" or holiday)  # Saída: False
 
 # Verificando disponibilidade de produto
-produtoDisponivelOnline = False
-produtoDisponivelLojaFisica = True
-print(produtoDisponivelOnline or produtoDisponivelLojaFisica)  # Saída: True
+product_available_online = False
+product_available_store = True
+print(product_available_online or product_available_store)  # Saída: True
 ```
 
 ## Negação lógica (`not`)
 
 Inverte o valor da expressão booleana. Se for `True`, torna-se `False` e vice-versa.
 
-```python
-chovendo = False
-print(not chovendo)  # Saída: True
+```
+raining = False
+print(not raining)  # Saída: True
 
 # Verificando se um usuário não está logado
-usuarioLogado = False
-print(not usuarioLogado)  # Saída: True
+user_logged_in = False
+print(not user_logged_in)  # Saída: True
 ```
