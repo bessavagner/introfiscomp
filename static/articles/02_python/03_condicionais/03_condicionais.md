@@ -1,6 +1,6 @@
 # Estrutura de execução condicional
 
-As estruturas condicionais são cruciais para direcionar o_fluxo_de_execução do programa com base em condições.
+As estruturas condicionais são cruciais para direcionar o fluxo de execução do programa com base em condições.
 
 ## Estrutura if
 
