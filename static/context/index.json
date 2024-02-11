@@ -22,6 +22,16 @@
                     "title": " Introdução",
                     "jsonPath": "/articles_processed/02_python/01_introducao.json",
                     "url": "/02_python/01_introducao"
+                },
+                {
+                    "title": " Funções",
+                    "jsonPath": "/articles_processed/02_python/02_funcoes.json",
+                    "url": "/02_python/02_funcoes"
+                },
+                {
+                    "title": " Condicionais e recursividade ",
+                    "jsonPath": "/articles_processed/02_python/03_condicionais.json",
+                    "url": "/02_python/03_condicionais"
                 }
             ]
         },

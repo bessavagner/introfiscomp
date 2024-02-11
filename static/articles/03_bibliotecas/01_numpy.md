@@ -1,5 +1,7 @@
 # Numpy: álgebra linear e computação científica
 
+(**Esta seção está em construção**)
+
 The fundamental package for scientific computing with Python
 
 Fast and versatile, the NumPy vectorization, indexing, and broadcasting concepts are the de-facto standards of array computing today.

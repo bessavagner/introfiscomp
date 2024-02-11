@@ -98,7 +98,7 @@ class MarkdownParser:
                 elif marker == Markers.table:
                     if 'header' not in table:
                         table['header'] = [
-                            value.strip() for value in line.split('|') if value
+                            replace_tags(value.strip()) for value in line.split('|') if value
                         ]
                         continue
                     if Markers.table_sep_pattern.findall(line):
@@ -107,7 +107,7 @@ class MarkdownParser:
                     if 'body' in table:
                         table['body'].append(
                             [
-                                value.strip()
+                                replace_tags(value.strip())
                                 for value in line.split('|') if value
                             ]
                         )
