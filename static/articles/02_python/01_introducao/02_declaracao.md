@@ -12,50 +12,53 @@ Em Python, as declarações são usadas para dizer ao interpretador o que fazer.
 
 ## Atribuições:
 
-As declarações de atribuição são usadas para atribuir um valor a uma variável. Por exemplo, a seguinte declaração atribui o valor 10 à variável `x`:
+As declarações de atribuição são usadas para atribuir um valor a uma variável.
+
+### Exemplos
 
 ```
-x = 10
+massa = 10
+aceleracao = 2
 ```
 
 Isso significa que a variável `x` agora contém o valor 10. Você pode usar a variável `x` em qualquer lugar do seu programa para se referir a esse valor.
 
 ## Declarações de função
 
-As declarações de função são usadas para definir funções. Uma função é um bloco de código que pode ser reutilizado em diferentes partes do seu programa. Por exemplo, a seguinte declaração define uma função chamada `soma()` que aceita dois argumentos e retorna a soma desses argumentos:
+As declarações de função são usadas para definir funções. Uma função é um bloco de código que pode ser reutilizado em diferentes partes do seu programa. Por exemplo, a seguinte declaração define uma função chamada `forca()` que aceita dois argumentos, `massa` e `aceleracao` e retorna a força:
 
 ```
-def soma(a, b):
-  return a + b
+def forca(massa, aceleracao):
+  return massa * aceleracao
 ```
 
-Isso significa que você pode usar a função `soma()` em qualquer lugar do seu programa para somar dois números. Por exemplo, o seguinte código usa a função `soma()` para somar os números 1 e 2 e armazenar o resultado na variável `resultado`:
+Isso significa que você pode usar a função `forca()` em qualquer lugar do seu programa para a força sobre uma partícula, das sua massa e sua aceleração. Por exemplo, o seguinte código usa a função `forca()` para uma partícula de 10 quilogramas e com aceleração de 2 metros por segundo ao quadrado, e então armazenar o resultado na variável `resultante`:
 
 ```
-resultado = soma(1, 2)
+resultante = forca(1, 2)
 ```
 
-Agora a variável `resultado` contém o valor 3.
+Agora a variável `resultante` contém o valor 3.
 
 ## Declarações de classe
 
 As declarações de classe são usadas para definir classes. Uma classe é um modelo para criar objetos. Por exemplo, a seguinte declaração define uma classe chamada `Pessoa` que tem dois atributos, `nome` e `idade`:
 
 ```
-class Pessoa:
-  def __init__(self, nome, idade):
-    self.nome = nome
-    self.idade = idade
+class Particula:
+  def __init__(self, massa, posicao):
+    self.massa = massa
+    self.posicao = posicao
 ```
 
-Isso significa que você pode usar a classe `Pessoa` para criar objetos que representam pessoas. Por exemplo, o seguinte código usa a classe `Pessoa` para criar dois objetos, `pessoa1` e `pessoa2`:
+Isso significa que você pode usar a classe `Particula` para criar objetos que representam pessoas. Por exemplo, o seguinte código usa a classe `Particula` para criar dois objetos, `particula1` e `particula2`:
 
 ```
-pessoa1 = Pessoa("João", 20)
-pessoa2 = Pessoa("Maria", 30)
+particula1 = Particula(9.11, 0)
+particula2 = Particula(1.67, 1)
 ```
 
-Agora os objetos `pessoa1` e `pessoa2` contêm informações sobre duas pessoas diferentes. Você pode usar esses objetos em qualquer lugar do seu programa para acessar essas informações.
+Agora os objetos `particula1` e `particula2` contêm informações sobre duas particulas diferentes. Você pode usar esses objetos no seu programa para acessar essas informações.
 
 ## Instruções condicionais
 

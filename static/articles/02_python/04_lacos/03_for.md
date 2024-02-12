@@ -74,3 +74,52 @@ for numero in numeros:
 ```
 
 Neste exemplo, o código irá percorrer a lista de números e imprimir cada um deles, mas irá parar a execução quando encontrar o número 3.
+
+
+## Exercícios resolvidos
+
+### Soma vetorial
+
+Crie om programa que realiza a soma vertial de dois vetores em duas dimenções. Os vetores podem ser representados por listas ou tuplas.
+
+#### Solução
+
+```
+def somar_vetores(v, w):
+    resultante = []
+    for vv, ww in zip(v, w):
+        resultante.append(ww + ww)
+    return resultante
+
+
+v = [1, 0, 1]
+w = [-1, 1, -1]
+print(somar_vetores(v, w))
+```
+
+Saída:
+```
+[-2, 2, -2]
+```
+
+Acima usamos a função buil-in `zip`, que serve para combinar e manipular dados em diferentes estruturas iteráveis, como listas, tuplas e dicionários. Ela funciona agrupando elementos de cada iterável em tuplas, criando uma nova estrutura de dados que facilita a manipulação conjunta dos dados originais
+
+#### Mais exemplos de aplicação de zip
+
+```
+# Combinar duas listas em uma lista de tuplas
+lista_nomes = ["Ana", "João", "Maria"]
+lista_idades = [20, 25, 30]
+
+dados_pessoais = zip(lista_nomes, lista_idades)
+
+# Iterar sobre duas listas simultaneamente
+for nome, idade in dados_pessoais:
+    print(f"{nome} tem {idade} anos")
+
+# Desempacotar tuplas
+nome, idade = zip(*dados_pessoais)
+
+# Criar dicionários
+dicionario_pessoas = dict(zip(lista_nomes, lista_idades))
+```

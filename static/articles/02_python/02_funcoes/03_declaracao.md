@@ -22,14 +22,14 @@ No exemplo acima, "Ana" é passado como o primeiro argumento e é associado ao p
 Os argumentos nomeados, também conhecidos como argumentos opcionais, permitem passar argumentos para uma função usando o nome do parâmetro correspondente. Isso oferece mais flexibilidade e clareza na chamada da função, especialmente quando há muitos parâmetros ou quando queremos fornecer apenas alguns argumentos específicos.
 
 ```
-def saudacao(nome, mensagem="Bem-vindo!"):
-    print(f"Olá, {nome}! {mensagem}")
+def posicao(t, v, s0=0):
+    return s0 + v*t
 
-saudacao("João")  # "Olá, João! Bem-vindo!"
-saudacao("Maria", "Que bom te ver!")  # "Olá, Maria! Que bom te ver!"
+posicao(2, 1)  # saída: 2
+posicao(0.5, 8, s0=2)  # 6
 ```
 
-No exemplo acima, o parâmetro mensagem é opcional e tem um valor padrão de "Bem-vindo!". Se não for fornecido na chamada da função, ele assumirá esse valor. No entanto, também podemos passar um valor diferente para mensagem, mesmo sem fornecer um valor para nome, desde que usemos a atribuição nomeada. Isso proporciona uma maior legibilidade ao código.
+No exemplo acima, o parâmetro `s0` é opcional e tem um valor padrão zero. Se não for fornecido na chamada da função, ele assumirá esse valor. No entanto, também podemos passar um valor diferente para `s0` usando a atribuição nomeada. Isso proporciona uma maior legibilidade ao código.
 
 ## Variáveis locais
 
@@ -41,6 +41,7 @@ def exemplo():
     print(variavel_local)
     
 exemplo()
+print(variavel_local)  # NameError
 ```
 
 ## Composição de funções

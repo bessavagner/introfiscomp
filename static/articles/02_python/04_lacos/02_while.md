@@ -57,3 +57,47 @@ Neste exemplo, o loop while é iniciado com a condição True, o que o tornaria 
 
 Ao usar break, certifique-se de ter uma condição de saída clara para evitar loops infinitos.
 
+## Exercícios resolvidos
+
+### 1. Lançamento vertical
+
+Crie um programa que atualize a velocidade de um corpo lançado verticalmente para cima, e imprime na tela a mensagem `"Objeto está subindo com velocidade de {v} m/s"`, onde v é a velocidade desse objeto.
+
+```
+import time  # para vermos a mensagem em tempo real
+
+def velocidade(t, vo=0, a=-9.8):
+    return vo + a*t
+
+def lancamento(v0, dt=0.1):
+    t = 0
+    v = v0
+    while v > 0:
+        print(f"Objeto está subindo com velocidade de {v:.2f} m/s")
+        t = t + dt
+        v = velocidade(t, v0)
+        time.sleep(dt)  # pausa a execução por 'dt' segundos
+
+    print("Objeto começa a cair agora.")
+
+lancamento(10, dt=0.1)
+```
+
+Saída:
+
+```
+Objeto está subindo com velocidade de 10.00 m/s
+Objeto está subindo com velocidade de 9.02 m/s
+Objeto está subindo com velocidade de 8.04 m/s
+Objeto está subindo com velocidade de 7.06 m/s
+Objeto está subindo com velocidade de 6.08 m/s
+Objeto está subindo com velocidade de 5.10 m/s
+Objeto está subindo com velocidade de 4.12 m/s
+Objeto está subindo com velocidade de 3.14 m/s
+Objeto está subindo com velocidade de 2.16 m/s
+Objeto está subindo com velocidade de 1.18 m/s
+Objeto está subindo com velocidade de 0.20 m/s
+Objeto começa a cair agora.
+```
+
+Acima usamos interpolação de string para imprimir a mensagem de acordo com a velocidade, e formatamos o número para duas casas decimais: dentro das chaves inserimos o especificador de formato `.2f`. O `f` indica que o valor deve ser tratado como `float`, e `.2` indica que o valor deve ser impresso com duas casas decimais. <a href="https://realpython.com/python-f-strings/">Veja mais sobre f-string</a>.

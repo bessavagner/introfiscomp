@@ -30,13 +30,14 @@ else:
 Usada para avaliar múltiplas condições de forma sequencial.
 
 ```
-nota = 85
-if nota >= 90:
-    print("Aprovado com louvor!")
-elif nota >= 70:
-    print("Aprovado")
+cut_off = 0.1
+distance = 0.4
+if distance >= cut_off:
+    print("Calcular força")
+elif distance < cut_off and distance > 0:
+    print("A força é zero")
 else:
-    print("Reprovado")
+    print("Erro de calculo! Distância não pode ser menor ou igual a zero.")
 ```
 
 ### Aninhamento de condicionais

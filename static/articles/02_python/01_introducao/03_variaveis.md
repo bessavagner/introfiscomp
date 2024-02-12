@@ -6,14 +6,14 @@ Variáveis são elementos fundamentais em Python, pois são utilizadas para arma
 
 Para criar uma variável em Python, basta atribuir um valor a ela usando o operador de atribuição `=`. Por exemplo:
 
-```python
-x = 10
+```
+dt = 0.001
 ```
 
-Neste exemplo, declaramos uma variável chamada `x` e atribuímos o valor `10` a ela. Para acessar o valor armazenado em uma variável, basta utilizar o nome da variável. Por exemplo, para imprimir o valor da variável `x` no console, você usaria:
+Neste exemplo, declaramos uma variável chamada `dt` e atribuímos o valor `0.001` a ela. Para acessar o valor armazenado em uma variável, basta utilizar o nome da variável. Por exemplo, para imprimir o valor da variável `dt` no console, você usaria:
 
-```python
-print(x)
+```
+print(dt)
 ```
 
 ## Regras para nomes de variáveis
@@ -34,7 +34,7 @@ Python suporta diversos tipos de dados que podem ser armazenados em variáveis. 
 
 Em Python, os números podem ser inteiros, flutuantes ou complexos. Veja exemplos:
 
-```python
+```
 inteiro = 10
 flutuante = 10.5
 complexo = 10 + 2j
@@ -44,7 +44,7 @@ complexo = 10 + 2j
 
 Strings são sequências de caracteres e podem ser definidas usando aspas simples ou duplas:
 
-```python
+```
 mensagem = "Olá mundo!"
 ```
 
@@ -90,33 +90,33 @@ As f-strings são mais concisas e fáceis de ler do que o método format. Elas t
 
 Listas são coleções ordenadas de elementos e podem conter diferentes tipos de dados. Para acessar os elementos de uma lista, você pode utilizar índices:
 
-```python
+```
 lista = [1, 2, 3, "Python", True]
 
 # Acessando o terceiro elemento da lista
-print(lista[2])
+print(lista[2])  # saída: 3
 ```
 
 ### Tuplas
 
 Tuplas são similares às listas, mas são imutáveis, ou seja, não podem ser alteradas após a criação. Para acessar os elementos de uma tupla, também é possível utilizar índices:
 
-```python
+```
 tupla = (1, 2, 3, "Python", True)
 
 # Acessando o último elemento da tupla
-print(tupla[-1])
+print(tupla[-1])  # saída: True
 ```
 
 ### Dicionários
 
 Dicionários são coleções de pares chave-valor e são muito úteis para armazenar informações relacionadas. Para acessar os valores de um dicionário, você pode utilizar as chaves:
 
-```python
+```
 dicionario = {"nome": "Maria", "idade": 25, "cidade": "São Paulo"}
 
 # Acessando a idade no dicionário
-print(dicionario["idade"])
+print(dicionario["idade"])  # saída: 25
 ```
 
 Esses são apenas alguns dos tipos de dados suportados em Python. Ao utilizar variáveis e tipos de dados de forma eficiente, você poderá criar programas mais robustos e expressivos. Experimente criar suas próprias variáveis e explorar diferentes tipos de dados em Python!

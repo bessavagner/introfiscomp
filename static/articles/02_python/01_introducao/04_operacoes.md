@@ -110,11 +110,12 @@ No início desta seção vimos o operador de atribuição simples (=). Mas exist
 O operador += é usado para adicionar um valor à variável existente e, em seguida, atualizar o valor da variável com o resultado da adição. Vejamos um exemplo:
 
 ```
-x = 10
-x += 5  # Adiciona 5 ao valor de x
-print(x)  # Saída: 15
+t = 1
+dt = 0.01
+t += dt  # Adiciona 5 ao valor de x
+print(dt)  # Saída: 1.01
 ```
-Neste exemplo, o valor original de x é 10. Usando x += 5, adicionamos 5 ao valor de x, resultando em 15.
+Neste exemplo, o valor original de t é 1. Usando t += 0.01, adicionamos dt, ou seja, 0.01 ao valor de t, resultando em 1.01.
 
 ### Atribuição com Subtração (-=)
 

@@ -32,9 +32,6 @@ Isso garantirá que a entrada do usuário seja interpretada como um número inte
 idade = int(input("Por favor, digite sua idade: "))
 ```
 
-
-
-
 ```
 print("Olá, mundo!")
 ```
