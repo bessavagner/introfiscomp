@@ -32,6 +32,11 @@
                     "title": " Condicionais e recursividade ",
                     "jsonPath": "/articles_processed/02_python/03_condicionais.json",
                     "url": "/02_python/03_condicionais"
+                },
+                {
+                    "title": " Laços",
+                    "jsonPath": "/articles_processed/02_python/04_lacos.json",
+                    "url": "/02_python/04_lacos"
                 }
             ]
         },
