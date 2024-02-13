@@ -55,6 +55,11 @@ class MarkdownParser:
 
             marker = line.split(' ')[0]
             if marker in Markers.set():
+                if marker == Markers.title and not extracting_code:
+                    raise ValueError(
+                        "There can be only one '#' in a article file. "
+                        f"Article: {article.title}; line content: {line}"
+                    )
                 if marker == Markers.section:
                     article.new_section()
                     article.sections[-1].title = line.split(
@@ -135,7 +140,12 @@ class MarkdownParser:
                         extracting_ol = False
                     else:
                         paragraphs.append(line)
-
+            if idx == len(elements) - 1:
+                if paragraphs:
+                    paragraphs[0] = replace_tags(paragraphs[0])
+                    article.sections[-1].add_content(
+                        texts=paragraphs
+                    )
         return article
 
 
