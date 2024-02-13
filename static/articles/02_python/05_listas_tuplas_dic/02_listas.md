@@ -6,7 +6,7 @@ As listas são estruturas de dados muito versáteis e úteis em Python. Elas per
 
 Para percorrer uma lista em Python, podemos utilizar um loop `for`. Veja um exemplo:
 
-```python
+```
 frutas = ['maçã', 'banana', 'laranja']
 
 for fruta in frutas:
@@ -19,7 +19,7 @@ Neste exemplo, o loop `for` itera sobre cada elemento da lista `frutas` e imprim
 
 O unpacking em Python permite atribuir os elementos de uma lista a variáveis separadas. Veja alguns exemplos:
 
-```python
+```
 # Unpacking de uma lista
 numeros = [1, 2, 3]
 a, b, c = numeros
@@ -40,7 +40,7 @@ print(restante)  # Saída: [2, 3, 4, 5]
 
 Python possui diversos métodos embutidos que facilitam a manipulação de listas. Aqui estão alguns exemplos:
 
-```python
+```
 numeros = [1, 2, 3, 4, 5]
 
 # Adicionar um elemento ao final da lista
@@ -66,7 +66,7 @@ numeros.clear()
 
 As fatias (slices) em Python permitem acessar partes específicas de uma lista. Veja um exemplo:
 
-```python
+```
 numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Acessar os elementos do índice 2 ao índice 5
@@ -80,7 +80,7 @@ print(numeros[0:8:2])  # Saída: [1, 3, 5, 7]
 
 List comprehension é uma forma concisa de criar listas em Python. Veja um exemplo usando f-string para formatar os elementos da lista:
 
-```python
+```
 numeros = [1, 2, 3, 4, 5]
 
 # Criar uma nova lista com o quadrado dos números

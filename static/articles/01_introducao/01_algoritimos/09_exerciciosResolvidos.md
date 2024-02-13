@@ -49,7 +49,7 @@ Início
 Fim
 ```
 
-# Exercício 3: Números pares
+## Exercício 3: Números pares
 
 Escreva um algoritmo para imprimir todos os números pares entre 1 e 100.
 
@@ -67,7 +67,7 @@ Início
 Fim
 ```
 
-# Exercício 4: Média de uma sequência de números
+## Exercício 4: Média de uma sequência de números
 
 Escreva um algoritmo para calcular a média de uma sequência de números inseridos pelo usuário.
 Solução:
@@ -93,7 +93,7 @@ Início
 Fim
 ```
 
-# Exercício 5: Maior elemento de uma sequência de números
+## Exercício 5: Maior elemento de uma sequência de números
 
 Escreva um algoritmo para encontrar o maior elemento de uma sequência de números inseridos pelo usuário.
 Solução:

@@ -1,6 +1,6 @@
 # Declaração e chamada de funções
 
-# Criando funções
+## Criando funções
 
 Além de utilizar funções built-ins, podemos criar nossas próprias funções personalizadas para encapsular lógicas específicas e reutilizáveis.
 

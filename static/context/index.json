@@ -37,6 +37,16 @@
                     "title": " Laços",
                     "jsonPath": "/articles_processed/02_python/04_lacos.json",
                     "url": "/02_python/04_lacos"
+                },
+                {
+                    "title": " Mais sobre listas, tuplas e dicionários",
+                    "jsonPath": "/articles_processed/02_python/05_listas_tuplas_dic.json",
+                    "url": "/02_python/05_listas_tuplas_dic"
+                },
+                {
+                    "title": " Exercícios - Funções, Condicionais e Laços",
+                    "jsonPath": "/articles_processed/02_python/06_exercicios_01.json",
+                    "url": "/02_python/06_exercicios_01"
                 }
             ]
         },
