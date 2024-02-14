@@ -12,6 +12,7 @@ gunicorn = "^21.2.0"
 uvicorn = "^0.27.0.post1"
 asgiref = "^3.7.2"
 flask = "^3.0.2"
+flask-cors = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

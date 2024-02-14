@@ -1,5 +1,6 @@
 import uvicorn
 
+from app import LOG
 from app.settings import (
     APP_DIR,
     APP_NAME,
@@ -29,7 +30,8 @@ def run():
         app_dir=APP_DIR,
         host=HOST,
         reload=DEBUG,
-        reload_includes=RELOAD_INCLUDES
+        reload_includes=RELOAD_INCLUDES,
+        log_level='info',
     )
 
 
