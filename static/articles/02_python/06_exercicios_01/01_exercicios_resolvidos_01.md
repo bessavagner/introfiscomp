@@ -63,15 +63,15 @@ Escreva um programa que verifica e imprime todos os números primos em um interv
 ### Solucão
 
 ```
-inicio = 10
-fim = 50
+inicio = input("Forneça o primeiro número do intervalo: ")
+fim = input("Forneça o segundo número do intervalo: ")
 for numero in range(inicio, fim+1):
     if numero > 1:
         for i in range(2, numero):
             if (numero % i) == 0:
                 break
-        else:
-            print(numero, "é um número primo")
+            else:
+                print(numero, "é um número primo")
 ```
 
 ## Média
@@ -127,7 +127,7 @@ def forca_grav(m, h, M=MASSA_TERRA, R=RAIO_TERRA):
 
 ### Note
 
-Aqui usamos a notação de potência de 10 para _float_: `6.67384e-11` é o mesmo que 6,67384 &times; &times; 10&lt;sup&gt;-11&lt;/sup&gt;
+Aqui usamos a notação de potência de 10 para _float_: `6.67384e-11` é o mesmo que <math display="inline">6,67384 &times 10<sup>-11</sup></math>
 
 ## Força gravitacional 2
 
