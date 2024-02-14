@@ -37,24 +37,28 @@ class Heading extends Component {
 }
 
 class Code extends Component {
-    constructor(code) {
+    constructor(code, language=null) {
         super('code');
+        if (language) {
+            this.setClassList(`language-${language}`)
+        }
         this.element.innerText = code;
     }
 }
 
 class PreCode extends Component {
-    constructor(code, dataPrefix = "") {
+    constructor(code, dataPrefix = "", language=null) {
         super('pre');
         this.element.setAttribute("data-prefix", dataPrefix);
-        const codeComponent = new Code(code);
+        const codeComponent = new Code(code, language);
         codeComponent.render(this.element);
     }
 }
 
 class MockupCode extends Component {
-    constructor() {
+    constructor(language) {
         super('div');
+        this.language = language;
         this.codeContainer = new Component('div');
         this.codeContainer.element.classList = "mockup-code-wrapper";
         this.element.classList = "mockup-code-container";
@@ -63,14 +67,14 @@ class MockupCode extends Component {
     }
     addCode(code) {
         const dataPrefix = `${this.codeContainer.element.childNodes.length + 1}`;
-        const codeComponent = new PreCode(code, dataPrefix);
+        const codeComponent = new PreCode(code, dataPrefix, this.language);
         codeComponent.render(this.codeContainer.element);
         return this.element;
     }
     addCodes(codes) {
         for (const code of codes) {
             const dataPrefix = `${this.codeContainer.element.childNodes.length + 1}`;
-            const codeComponent = new PreCode(code, dataPrefix);
+            const codeComponent = new PreCode(code, dataPrefix, this.language);
             codeComponent.render(this.codeContainer.element);
         }
         return this.element;
