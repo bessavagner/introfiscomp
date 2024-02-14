@@ -1,8 +1,5 @@
 import os
-import logging
 from pathlib import Path
-from logging import NullHandler
-from logging.config import dictConfig
 
 from dotenv import load_dotenv
 
@@ -22,11 +19,16 @@ ARTICLES_PROCESSED_DIR = STATIC_DIR / 'articles_processed'
 TEMPLATES_PROCESSED_DIR = TEMPLATES_DIR / 'processed'
 CONTEXT_PATH_DIR = STATIC_DIR / 'context'
 
+SECRETS = os.environ.get(
+    "SECRETS",
+    default="INSECURE-X3azliUf7INg018n-oBUFl94530UhYuahdvJmwxYKwE"
+)
 APP_NAME = os.environ.get("APP_NAME", default="app")
 APP_DIR = os.environ.get("APP_DIR", default=".")
 APP_PORT = int(os.environ.get("APP_PORT", default="5000"))
 ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS", default="localhost,0.0.0.0"
-).split(',')
-HOST = ALLOWED_HOSTS[1]
+    "ALLOWED_HOSTS", default="http://0.0.0.0:5000, https://0.0.0.0:5000"
+)
 DEBUG = bool(os.environ.get("DEBUG", default=True))
+
+HOST = ALLOWED_HOSTS.split(', ')[0].split('//')[1].split(':')[0]
