@@ -50,13 +50,14 @@ class PreCode extends Component {
     constructor(code, dataPrefix = "", language=null) {
         super('pre');
         this.element.setAttribute("data-prefix", dataPrefix);
-        const codeComponent = new Code(code, language);
+        this.setClassList(`language-${language}`)
+        const codeComponent = new Code(code);
         codeComponent.render(this.element);
     }
 }
 
 class MockupCode extends Component {
-    constructor(language) {
+    constructor(language=null) {
         super('div');
         this.language = language;
         this.codeContainer = new Component('div');
@@ -229,14 +230,14 @@ class Article extends Component {
         ol.render(this.element);
     }
 
-    addCodes(codes) {
-        const mockupCode = new MockupCode();
+    addCodes(codes, language=null) {
+        const mockupCode = new MockupCode(language);
         mockupCode.addCodes(codes);
         mockupCode.render(this.element);
     }
 
-    addCode(code) {
-        const mockupCode = new MockupCode();
+    addCode(code, language=null) {
+        const mockupCode = new MockupCode(language);
         mockupCode.addCode(code);
         mockupCode.render(this.element);
     }
@@ -343,10 +344,16 @@ export class ArticleSet {
                                     await article.addCodeFromFile(content.mockupCodePath);
                                 }
                                 if (content.mockupCodes) {
-                                    article.addCodes(content.mockupCodes);
+                                    article.addCodes(
+                                        content.mockupCodes.codes,
+                                        content.mockupCodes.language
+                                    );
                                 }
                                 if (content.mockupCode) {
-                                    article.addCode(content.mockupCode);
+                                    article.addCode(
+                                        content.mockupCode.code,
+                                        content.mockupCode.language
+                                    );
                                 }
                                 if (content.p) {
                                     article.addParagraph(content.p);

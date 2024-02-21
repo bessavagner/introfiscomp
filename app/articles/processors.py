@@ -44,6 +44,7 @@ class MarkdownParser:
         ordered_list = []
         paragraphs = []
         table = {}
+        language = None
 
         for idx, line in enumerate(elements):
 
@@ -72,16 +73,22 @@ class MarkdownParser:
                     title = line.split(Markers.subsubsection)[-1].strip()
                     article.sections[-1].add_content(subsubsection=title)
                 elif marker == Markers.code:
+                    if not extracting_code:
+                        marker_line = line.split(' ')
+                        if len(marker_line) > 1:
+                            language = marker_line[-1]
                     if extracting_code:
                         extracting_code = False
                         if len(codes) > 1:
                             article.sections[-1].add_content(
-                                mockup_codes=codes
+                                mockup_codes=codes,
+                                language=language
                             )
                         else:
                             if codes:
                                 article.sections[-1].add_content(
-                                    mockup_codes=codes[0]
+                                    mockup_codes=codes[0],
+                                    language=language
                                 )
                         codes = []
                         continue

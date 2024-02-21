@@ -2,10 +2,15 @@
 {{% block title %}}{title} {{% endblock %}}
 {{% block head %}}
   {{{{ super() }}}}
+  <link href="{{{{ url_for('static', filename='css/prism.css') }}}}" rel="stylesheet" />
 {{% endblock %}}
 {{% block content %}}
     <div id="app">
       <h1>{articles_set_title}</h1>
     </div>
     <script type="module" src="{{{{ url_for('static', filename='{javascript}') }}}}"></script>
+{{% endblock %}}
+{{% block scripts %}}
+{{{{ super() }}}}
+<script type="module" src="{{{{ url_for('static', filename='js/modules/prism.js') }}}}"></script>
 {{% endblock %}}

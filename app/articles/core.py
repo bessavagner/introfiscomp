@@ -39,20 +39,30 @@ class Content:
     def add_paragraphs(self, texts: List[str]) -> None:
         self.elements.extend([{"p": text} for text in texts])
 
-    def add_mockup_code(self, mockup_code: str, paragraph: str = None):
+    def add_mockup_code(self,
+                        mockup_code: str,
+                        language: str,
+                        paragraph: str = None):
         content = {}
         if paragraph:
             content["p"] = paragraph
-        content["mockupCode"] = mockup_code
+        content["mockupCode"] = {
+            "code": mockup_code,
+            "language": language
+        }
         self.elements.append(content)
 
     def add_mockup_codes(self,
                          mockup_codes: List[str],
+                         language: str,
                          paragraph: str = None):
         content = {}
         if paragraph:
             content["p"] = paragraph
-        content["mockupCodes"] = mockup_codes
+        content["mockupCodes"] = {
+            "codes": mockup_codes,
+            "language": language
+        }
         self.elements.append(content)
 
     def add_unordered_list(self, items: List[str]):
@@ -78,6 +88,7 @@ class Section:
 
     def add_content(self,
                     mockup_codes: str | List[str] = None,
+                    language: str = None,
                     texts: str | List[str] = None,
                     unordered_list: List[str] = None,
                     ordered_list: List[str] = None,
@@ -94,9 +105,9 @@ class Section:
                 self.content.add_paragraph(texts)
         if mockup_codes:
             if isinstance(mockup_codes, list):
-                self.content.add_mockup_codes(mockup_codes)
+                self.content.add_mockup_codes(mockup_codes, language=language)
             elif isinstance(mockup_codes, str):
-                self.content.add_mockup_code(mockup_codes)
+                self.content.add_mockup_code(mockup_codes, language=language)
         if unordered_list:
             self.content.add_unordered_list(unordered_list)
         if ordered_list:

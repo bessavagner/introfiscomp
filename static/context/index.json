@@ -12,6 +12,11 @@
                     "title": " Estruturas de dados",
                     "jsonPath": "/articles_processed/01_introducao/02_estruturas.json",
                     "url": "/01_introducao/02_estruturas"
+                },
+                {
+                    "title": " Exercícios",
+                    "jsonPath": "/articles_processed/01_introducao/03_exercícios.json",
+                    "url": "/01_introducao/03_exercícios"
                 }
             ]
         },
