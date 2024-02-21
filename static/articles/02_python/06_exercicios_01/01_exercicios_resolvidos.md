@@ -6,7 +6,7 @@ Crie um programa em Python que calcula a média de uma lista de números. A méd
 
 ### Solucão
 
-```
+``` python
 numeros = [10, 20, 30, 40, 50]
 soma = sum(numeros)
 media = soma / len(numeros)
@@ -34,7 +34,7 @@ Crie um programa que conta o número de vogais em uma string fornecida pelo usu�
 
 ### Solucão
 
-```
+``` python
 string = "Python é uma linguagem de programação"
 vogais = "aeiou"
 contador = 0
@@ -50,7 +50,7 @@ Escreva um programa que calcula a soma dos dígitos de um número inteiro fornec
 
 ### Solucão
 
-```
+``` python
 numero = 12345
 soma = sum(int(digito) for digito in str(numero))
 print(f"A soma dos dígitos do número é: {soma}")
@@ -62,7 +62,7 @@ Escreva um programa que verifica e imprime todos os números primos em um interv
 
 ### Solucão
 
-```
+``` python
 inicio = input("Forneça o primeiro número do intervalo: ")
 fim = input("Forneça o segundo número do intervalo: ")
 for numero in range(inicio, fim+1):

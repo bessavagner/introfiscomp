@@ -16,7 +16,7 @@ As declarações de atribuição são usadas para atribuir um valor a uma variá
 
 ### Exemplos
 
-```
+``` python
 massa = 10
 aceleracao = 2
 ```
@@ -44,7 +44,7 @@ Agora a variável `resultante` contém o valor 3.
 
 As declarações de classe são usadas para definir classes. Uma classe é um modelo para criar objetos. Por exemplo, a seguinte declaração define uma classe chamada `Pessoa` que tem dois atributos, `nome` e `idade`:
 
-```
+``` python
 class Particula:
   def __init__(self, massa, posicao):
     self.massa = massa
