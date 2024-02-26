@@ -52,6 +52,11 @@
                     "title": " Exercícios - Funções, Condicionais e Laços",
                     "jsonPath": "/articles_processed/02_python/06_exercicios_01.json",
                     "url": "/02_python/06_exercicios_01"
+                },
+                {
+                    "title": " Estudo de caso - Turtle",
+                    "jsonPath": "/articles_processed/02_python/07_estudo_turtle.json",
+                    "url": "/02_python/07_estudo_turtle"
                 }
             ]
         },

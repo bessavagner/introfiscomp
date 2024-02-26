@@ -12,6 +12,7 @@ ROOT_DIR = Path(__name__).resolve().parent
 STATIC_DIR = ROOT_DIR / 'static'
 TEMPLATES_DIR = ROOT_DIR / 'templates'
 ARTICLES_DIR = STATIC_DIR / 'articles'
+IMAGES_DIR = STATIC_DIR / 'images'
 ARTICLE_TEMPLATE_DIR = TEMPLATES_DIR / '.articles.html.templates'
 JS_TEMPLATE = STATIC_DIR / 'js/.js.template'
 JAVASCRIPT_PROCESSED_DIR = STATIC_DIR / 'js' / 'processed'
