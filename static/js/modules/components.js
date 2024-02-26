@@ -130,7 +130,7 @@ class Table extends Component {
 class Image extends Component {
     constructor(src) {
         super('img');
-        const container = new Component('div');
+        this.container = new Component('div');
         this.element.src = src;
         this.render(this.container.element);
     }
@@ -258,6 +258,11 @@ class Article extends Component {
         }
         tableComponent.render(this.element);
     }
+
+    addImage(path) {
+        const img = new Image(path);
+        img.render(this.element);
+    }
 }
 
 export class Steps extends Component {
@@ -372,6 +377,9 @@ export class ArticleSet {
                                 }
                                 if (content.subsubsection) {
                                     article.addSubSubSection(content.subsubsection);
+                                }
+                                if (content.img) {
+                                    article.addImage(content.img);
                                 }
                             }
                         }

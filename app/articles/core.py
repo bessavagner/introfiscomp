@@ -13,8 +13,12 @@ class Markers:
     code: str = "```"
     ul: str = "-"
     table: str = "|"
+    image: str = "!"
     ol_pattern: re.Pattern = re.compile(r'^\d+\.\s*(.+)$', re.MULTILINE)
     table_sep_pattern: re.Pattern = re.compile(r'-{2,}')
+    image_path_pattern: re.Pattern = re.compile(
+        r'!\[.*?\]\((.+?)(?:\s+".+?")?\)'
+    )
 
     @classmethod
     def set(cls):
@@ -25,7 +29,8 @@ class Markers:
             cls.subsubsection,
             cls.code,
             cls.ul,
-            cls.table
+            cls.table,
+            cls.image
         }
 
 
@@ -80,6 +85,9 @@ class Content:
             }
         )
 
+    def add_image(self, path: str):
+        self.elements.append({'img': path})
+
 
 class Section:
     def __init__(self, title: str = None):
@@ -93,6 +101,7 @@ class Section:
                     unordered_list: List[str] = None,
                     ordered_list: List[str] = None,
                     table: dict[str, List] = None,
+                    image: str = None,
                     subsection: str = None,
                     subsubsection: str = None):
         if texts:
@@ -120,7 +129,8 @@ class Section:
                 raise KeyError(
                     "'table' must have 'header' and 'body' keys"
                 ) from err
-
+        if image:
+            self.content.add_image(image)
         if subsection:
             self.content.elements.append({"subsection": subsection})
 

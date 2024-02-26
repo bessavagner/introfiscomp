@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from collections import OrderedDict
 from app.articles.core import Markers, Article, Document
+from app.settings import IMAGES_DIR, ROOT_DIR
 
 from .utils import replace_tags, naive_senences
 
@@ -55,6 +56,11 @@ class MarkdownParser:
                 paragraphs = []
 
             marker = line.split(' ')[0]
+            if len(marker) > 1 and marker not in Markers.set():
+                if marker.startswith('!'):
+                    marker = "!"
+                elif marker.startswith('|'):
+                    marker = "|"
             if marker in Markers.set():
                 if marker == Markers.title and not extracting_code:
                     raise ValueError(
@@ -110,7 +116,8 @@ class MarkdownParser:
                 elif marker == Markers.table:
                     if 'header' not in table:
                         table['header'] = [
-                            replace_tags(value.strip()) for value in line.split('|') if value
+                            replace_tags(value.strip())
+                            for value in line.split('|') if value
                         ]
                         continue
                     if Markers.table_sep_pattern.findall(line):
@@ -130,6 +137,11 @@ class MarkdownParser:
                                 table = {}
                         elif idx + 1 == len(elements):
                             article.sections[-1].add_content(table=table)
+                elif marker == Markers.image:
+                    matches = re.findall(Markers.image_path_pattern, line)
+                    if matches:
+                        path = IMAGES_DIR.relative_to(ROOT_DIR) / Path(matches[0]).name
+                        article.sections[-1].add_content(image=f"/{path}")
             else:
                 if extracting_code:
                     codes.append(line)
