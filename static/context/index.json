@@ -57,6 +57,21 @@
                     "title": " Estudo de caso - Turtle",
                     "jsonPath": "/articles_processed/02_python/07_estudo_turtle.json",
                     "url": "/02_python/07_estudo_turtle"
+                },
+                {
+                    "title": " Exceções ",
+                    "jsonPath": "/articles_processed/02_python/08_execoes.json",
+                    "url": "/02_python/08_execoes"
+                },
+                {
+                    "title": " Arquivos",
+                    "jsonPath": "/articles_processed/02_python/09_arquivos.json",
+                    "url": "/02_python/09_arquivos"
+                },
+                {
+                    "title": " Classes",
+                    "jsonPath": "/articles_processed/02_python/10_classes.json",
+                    "url": "/02_python/10_classes"
                 }
             ]
         },

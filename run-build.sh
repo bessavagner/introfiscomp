@@ -6,7 +6,6 @@ pip install -r requirements.txt
 # Install tailwindcss
 npm install tailwindcss
 npm install @tailwindcss/typography
-npm install @tailwindcss/typography
 npm install daisyui@latest
 
 # build files to serve
